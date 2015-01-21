@@ -319,6 +319,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
+            'images/{,*/}*.svg',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
@@ -372,7 +373,7 @@ module.exports = function (grunt) {
         'sass',
         'copy:styles',
         'imagemin',
-        'svgmin'
+        //'svgmin'
       ]
     }
   });
