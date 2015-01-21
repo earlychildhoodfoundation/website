@@ -47,7 +47,9 @@ h1,.h1,h2,.h2,.lede {
 	color: #666;
 }
 
-h1 {font-weight: 300; color: #FFF; letter-spacing: .2em;}
+h2,.h2 {color:#F13349;}
+
+h1 {font-weight: 300; color: #FFF; letter-spacing: .1em; text-shadow: 1px 3px 0 #000;}
 
 .h2 {font-size: 1.5rem;}
 .h3 {font-size: 1.125rem !important; font-weight: bold; color:#666;}
