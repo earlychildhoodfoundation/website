@@ -32,19 +32,27 @@ html, body {
 }
 
 body {
+	font-size: 1.125rem;
 	background-color: #FFE;
-	color: #444;
+	color: #555;
 	padding-bottom: 100px;
 }
 
-
-h1,h2,h3,.lede {
+h1,.h1,h2,.h2,h3,.h3 {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+h1,.h1,h2,.h2,.lede {
 	font-family: Oswald, sans-serif;
+	color: #666;
 }
 
 h1 {font-weight: 300; color: #FFF; letter-spacing: .2em;}
 
-.lede{font-size: 1.3em; color: #555;}
+.h2 {font-size: 1.5rem;}
+.h3 {font-size: 1.125rem !important; font-weight: bold; color:#666;}
+
+.lede{font-size: 1.5rem; line-height: 1.5;}
 
 .logo {
 	position: absolute;
@@ -61,16 +69,22 @@ h1 {font-weight: 300; color: #FFF; letter-spacing: .2em;}
 	text-align: center;
 }
 
-
-
-
-
-.island {
+.push-top-md {
+		margin-top: 20px;
 	@media (min-width: $screen-md-min) {
-		padding: 60px;
+		margin-top: 30px;
+	}
+
+}.push-top-lg {
+		margin-top: 20px;
+	@media (min-width: $screen-md-min) {
+		margin-top: 40px;
 	}
 }
 
-.island--bg {
+.island-bg {
 	background: #F9F8FA;
 }
+
+.btn-primary {background-color: #F13349; border-color: mix(black,#F13349, 30%)}
+.panel {box-shadow: none; background:rgba(255,255,255,.4);}

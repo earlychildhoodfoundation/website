@@ -1,1 +1,1 @@
-rsync -zavilr --delete --exclude '.DS_Store' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhood
+rsync -zavilr --delete --exclude '.DS_Store' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhoodfoundation
