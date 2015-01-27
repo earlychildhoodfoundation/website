@@ -11,8 +11,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 .header {
-	padding-top: 7vh;
-	padding-bottom: 3vh;
+	padding-top: 3vh;
 	height: 100%;
 	width: 100%;
 	background-image: url(../images/red-tile.jpg);
@@ -21,7 +20,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .img-center {
 	margin: 0 auto;
-	max-height: 80vh;
+	max-height: 87vh;
 	height: auto;
 	width:auto;
 }
@@ -46,21 +45,39 @@ h1,.h1,h2,.h2,.lede {
 	color: #666;
 }
 
+.container-fluid {
+	max-width: 1600px;
+}
+
 h2,.h2 {color:#F13349;}
 
 h1 {font-weight: 300; color: #FFF; letter-spacing: .1em; text-shadow: 1px 3px 0 #000;}
 
 .h2 {font-size: 1.5rem;}
-.h3 {font-size: 1.125rem !important; font-weight: bold; color:#666;}
+.h3 {font-size: 1.125rem !important; font-weight: bold; color:#38BEDD;}
+
+ul {
+	padding: 0;
+}
+
+p {
+	@media (min-width: $screen-lg-min) {
+		text-align: justify;
+		hyphens:auto;
+	}
+}
 
 .lede{font-size: 1.5rem; line-height: 1.5;}
 
 .logo {
 	position: absolute;
-	top: 50%;
-	top: calc( 50% + 50px );
+	top: 33%;
+	top: calc( 33% + 50px );
 	left: 50%;
 	left: calc( 50% - 50px);
+	background: #ED3839;
+	border-radius: 100%;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,.3);
 }
 
 
@@ -92,3 +109,7 @@ h1 {font-weight: 300; color: #FFF; letter-spacing: .1em; text-shadow: 1px 3px 0 
 
 .btn-primary {background-color: #F13349; border-color: mix(black,#F13349, 30%)}
 .panel {box-shadow: none; background:rgba(255,255,255,.4);}
+
+.text--left p {
+	text-align: left !important;
+}
