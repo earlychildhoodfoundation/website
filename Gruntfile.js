@@ -361,12 +361,18 @@ module.exports = function (grunt) {
     },
 
     shell: {
-      rsyncprod: {
+      syncprod: {
         options: {
             stdout: true
         },
         command: "rsync -zavilr --delete --exclude '.DS_Store' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhoodfoundation"
-      }
+      },
+      syncstage: {
+        options: {
+            stdout: true
+        },
+        command: "rsync -zavilr --delete --exclude '.DS_Store' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhood"
+      },
     },
 
     // Run some tasks in parallel to speed up build process
@@ -426,10 +432,29 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('prod', function() {
+  grunt.registerTask('buildprod', function() {
     grunt.task.run([
       'build',
-      'shell:rsyncprod'
+      'shell:syncprod'
+    ]);
+  });
+
+  grunt.registerTask('syncprod', function() {
+    grunt.task.run([
+      'shell:syncprod'
+    ]);
+  });
+
+  grunt.registerTask('buildstage', function() {
+    grunt.task.run([
+      'build',
+      'shell:syncstage'
+    ]);
+  });
+
+  grunt.registerTask('syncstage', function() {
+    grunt.task.run([
+      'shell:syncstage'
     ]);
   });
 
