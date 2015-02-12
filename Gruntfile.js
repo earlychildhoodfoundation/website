@@ -360,6 +360,15 @@ module.exports = function (grunt) {
       }
     },
 
+    shell: {
+      rsyncprod: {
+        options: {
+            stdout: true
+        },
+        command: "rsync -zavilr --delete --exclude '.DS_Store' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhoodfoundation"
+      }
+    },
+
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
@@ -414,6 +423,13 @@ module.exports = function (grunt) {
     grunt.task.run([
       'connect:test',
       'mocha'
+    ]);
+  });
+
+  grunt.registerTask('prod', function() {
+    grunt.task.run([
+      'build',
+      'shell:rsyncprod'
     ]);
   });
 
