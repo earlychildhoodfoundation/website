@@ -14,7 +14,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 	padding-top: 3vh;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/red-tile.jpg);
+	background-color: #FA4443;
 	position: relative;
 }
 
@@ -51,7 +51,7 @@ h1,.h1,h2,.h2,.lede {
 
 h2,.h2 {color:#F13349;}
 
-h1 {font-weight: 300; color: #FFF; letter-spacing: .1em; text-shadow: 1px 3px 0 #000;}
+h1 {font-weight: 300; color: #FFF; letter-spacing: .1em;}
 
 .h2 {font-size: 1.5rem;}
 .h3 {font-size: 1.125rem !important; font-weight: bold; color:#38BEDD;}
@@ -69,23 +69,22 @@ p {
 
 .lede{font-size: 1.5rem; line-height: 1.5;}
 
+
+// TODO, remove or reuse logo!
+
 .logo {
+  display: none;
 	position: absolute;
-	top: 33%;
-	top: calc( 33% + 50px );
-	left: 50%;
-	left: calc( 50% - 50px);
-	background: #ED3839;
 	border-radius: 100%;
-	box-shadow: 0 0 10px 1px rgba(0,0,0,.3);
+  background-color: #FA4443;
+  border-radius: 100%;
 }
 
 
 
 .foundation-wrapper {
 	position: absolute;
-	top: 50%;
-	top: calc( 50% - 50px);
+	top: calc(40%);
 	width: 100%;
 	text-align: center;
 }

@@ -1,1 +1,1 @@
-console.log('\'Allo \'Allo!');
+$("#fittext-1").fitText(1.8);
