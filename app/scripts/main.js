@@ -35,6 +35,12 @@ $('.navbar li a').on('click', function(event) {
     scrollBy(0, -offset);
 });
 
+// On mobile close the navbar after clicking so that it doesn't cover the content
+$('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+        $('.navbar-toggle:visible').click();
+});
+
+
 /*------------------------------------*\
 								FORM VALIDATION AND AJAX SUBMIT
 \*------------------------------------*/
