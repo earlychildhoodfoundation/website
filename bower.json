@@ -4,12 +4,7 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.4",
     "modernizr": "~2.8.2",
-    "FitText.js": "~1.2.0"
-  },
-  "resolutions": {
-    "bootstrap-sass-official": "~3.3.4"
-  },
-  "devDependencies": {
+    "FitText.js": "~1.2.0",
     "jquery-form": "~3.46.0",
     "jquery-validate": "~1.13.1"
   }
