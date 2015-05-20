@@ -1,0 +1,13 @@
+label {
+  width: 100%;
+}
+
+input, textarea {
+  box-shadow: none !important;
+  font-weight: 300;
+}
+
+
+input[type="file"] {
+	line-height: 1ex !important;
+}

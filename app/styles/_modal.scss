@@ -1,0 +1,73 @@
+/*------------------------------------*\
+		$MODAL
+\*------------------------------------*/
+
+.close {
+		font-size: 2rem;
+		@media (max-width: $screen-md-min) {
+			font-size: 1.5rem
+		}
+ }
+
+.modal {
+	color: #444;
+	text-shadow: none;
+	//position: absolute;
+}
+
+.modal-wrapper {
+	max-width: 767px;
+	margin: 0 auto;
+}
+
+.modal-header {
+	border-bottom: 0;
+	@media (max-width: $screen-md-min) {
+		padding-bottom: 5px;
+ }
+}
+
+.modal-body {
+	padding-top: 0;
+}
+
+.modal-dialog {
+	width: 100%;
+	width: 100vw;
+	height: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background: $white;
+}
+
+.modal-content {
+	box-shadow: none;
+	border: 0;
+}
+
+.modal-backdrop.in {
+	background-color: $white;
+}
+
+.modal__title {
+	font-family: $title-font;
+	color: $brand-secondary;
+	font-size: 2em;
+	@media (max-width: $screen-md-min) {
+			 margin-top:0;
+	}
+}
+
+.modal-open .content {
+	//-webkit-filter: blur(2px);
+}
+
+/*------------------------------------*\
+		$FORM
+\*------------------------------------*/
+
+
+	.email-notice {
+			font-size: 1.2rem;
+	}

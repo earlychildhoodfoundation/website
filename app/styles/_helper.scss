@@ -1,0 +1,87 @@
+// HELPER CLASSES
+
+.visible {
+  visibility: visible;
+}
+
+.glyphicon {
+  top:3px;
+}
+
+.muted {
+  color: #999;
+}
+
+.push--top {
+	margin-top: 1rem;
+}
+
+.push--top-3 {
+	margin-top: 3rem;
+}
+
+.hard {
+	 padding: 0;
+}
+
+.flush {
+	margin:0;
+}
+
+.hard--top {
+	padding-top: 0;
+}
+
+.mb-top--flush {
+	margin-top: 0;
+}
+
+.push-top-md {
+	margin-top: 20px;
+	@media (min-width: $screen-md-min) {
+		margin-top: 30px;
+	}
+}
+
+.push-top-lg {
+	margin-top: 20px;
+  @media (min-width: $screen-md-min) {
+	margin-top: 40px;
+  }
+}
+
+.error {color: #F00}
+
+.required::after{
+	content: "*";
+	color: red;
+	margin-left: -.4em;
+}
+
+.panel {box-shadow: none; background:rgba(255,255,255,.4);}
+
+
+.island-bg {
+  background: #F9F8FA;
+}
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.position-relative {
+	position: relative !important;
+}
+
+.position-absolute {
+	position: absolute !important;
+}
+
+.full-height {
+	height: 100vh;
+}
+

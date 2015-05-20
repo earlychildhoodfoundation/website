@@ -1,13 +1,15 @@
 <?php
 
 /**
- *
- * email form handling (c)Jan De Wilde
- *
- */
+	*
+	* email form handling (c)Jan De Wilde
+	*
+	*/
 
 // the email address you send from
-$email = "info@earlychildhoodfoundation.org";
+//$email = "info@earlychildhoodfoundation.org";
+
+$email = "jan@jandewilde.org";
 
 
 // the email signature
@@ -24,7 +26,7 @@ $message="";
 
 // process form data
 foreach($_POST as $name => $value){
-    $message.=$name.': '.htmlentities($value)."\n";
+				$message.=$name.': '.htmlentities($value)."\n";
 }
 
 // prevent form from header injection
@@ -35,7 +37,7 @@ $from=str_replace("\r"," ",$from);
 $header="From: ".$from."\n";
 $header.="Reply-To: ".$from."\n";
 $header.="MIME-Version: 1.0"."\n";
-$header.="Content-type: text/plain; charset=utf-8";
+$header.="Content-type: multipart/mixed; charset=utf-8";
 
 //
 $dtg=date('l dS \of F Y h:i:s A');
@@ -43,25 +45,25 @@ $dtg=date('l dS \of F Y h:i:s A');
 // email validation
 function validateEmail($emailaddress)
 {
-    if (filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
-        $bits = explode('@', $emailaddress);
-        if (checkdnsrr($bits[1], "MX"))
-        {
-            return true;
-        }
-    }
-    return false;
+				if (filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
+								$bits = explode('@', $emailaddress);
+								if (checkdnsrr($bits[1], "MX"))
+								{
+												return true;
+								}
+				}
+				return false;
 }
 
 // send the email if message variable is not empty
 if (empty($_POST['name']) || empty($from)) {
-    echo("sending failed, name or email wasn't specified: <a href=\"/\">Try again</a>");
-    die();
+				echo("sending failed, name or email wasn't specified: <a href=\"/\">Try again</a>");
+				die();
 } elseif (! validateEmail($from)) {
-    echo ("the email " . $from . " you specified is invalid. <a href=\"/\">Try again</a> ");
-    die();
+				echo ("the email " . $from . " you specified is invalid. <a href=\"/\">Try again</a> ");
+				die();
 } else {
-    mail($email, $subject, $message, $header);
+				mail($email, $subject, $message, $header);
 }
 
 
@@ -75,10 +77,16 @@ $message = "Note: This is an automated response to confirm receipt of your messa
 $message.="Dear " . ucwords($_POST['name']) . ",\n\n";
 $message.=$customer_message."\n\n";
 $message.=$signature;
+
 if ($_POST['message']) {
 $message.="\n\nYour message on ".date("n/j/Y g:i a").":\n";
 $message.=$_POST['message'];
 };
+
+if(count($_FILES['application']['name'])) {
+	foreach ($_FILES['application']['name'] as $file) {
+					$message.= $file;
+	}
 
 mail($from, $subject, $message, $header);
 
