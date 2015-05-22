@@ -56,7 +56,7 @@ var ajaxoptions = {
 				beforeSubmit: function(){
 								$('.modal-body')
 												.empty()
-												.append('<span class="glyphicon glyphicon-refresh infinite-spinning push--top" style="font-size:2rem;">');
+												.append('<span class="glyphicon glyphicon-refresh infinite-spinning push-top" style="font-size:2rem;">');
 								$('.modal__title')
 												.html('Sending your message&hellip;');
 				},
