@@ -10,6 +10,7 @@
 // $ELEMENTS
 html, body {
 font: 100%/1.6 $base-font;
+overflow-x: hidden;
 }
 
 body {
@@ -77,6 +78,7 @@ padding: 0;
 	margin-top: 30px;
 	font-family: $title-font;
 	font-weight: 300;
+	line-height:1.5;
 }
 
 .h1 {
