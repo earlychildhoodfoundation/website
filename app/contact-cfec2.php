@@ -46,6 +46,7 @@ $email->AddAddress( $companyEmail );
 
 // Add the attachments
 
+// Refuse attachments < 25MB
 if (array_sum($_FILES['application']['size']) < 25 * 1024 * 1024) {
 	foreach(array_keys($_FILES['application']['name']) as $key) {
 		$source = $_FILES['application']['tmp_name'][$key]; // location of PHP's temporary file for this.
@@ -55,8 +56,6 @@ if (array_sum($_FILES['application']['size']) < 25 * 1024 * 1024) {
 } else {
 	echo "Message not sent. Please keep attachments total filesize under 25MB";
 	die();
-
-
 }
 
 
