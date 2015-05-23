@@ -50,7 +50,6 @@ padding: 0;
 		border-radius:100%;
 		text-align: center;
 		line-height: 3em; //vertically center counter
-		//margin-top: 1ex;
 	}
 }
 
@@ -101,13 +100,23 @@ padding: 0;
 
 .lede {
 	color: #666;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	line-height: 1.5;
 	font-weight: 300;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 1.6rem;
+	}
+
 }
 
 .lede-section {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 1.4rem;
+	}
+
 }
 
 // $LAYOUT
