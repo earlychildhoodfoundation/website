@@ -1,5 +1,8 @@
+// Make h1 span viewport width
 $("#fittext-1").fitText(1.8);
 
+
+// Fixed positioning for navbar
 var didScroll;
 var lastScroll;
 // What's the offset of the navbar from the top
@@ -29,15 +32,16 @@ function hasScrolled() {
 
 var offset = 95;
 
+// scroll to nav id on click
 $('.navbar li a').on('click', function(event) {
-    event.preventDefault();
-    $($(this).attr('href'))[0].scrollIntoView();
-    scrollBy(0, -offset);
+		event.preventDefault();
+		$($(this).attr('href'))[0].scrollIntoView();
+		scrollBy(0, -offset);
 });
 
 // On mobile close the navbar after clicking so that it doesn't cover the content
 $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
-        $('.navbar-toggle:visible').click();
+				$('.navbar-toggle:visible').click();
 });
 
 
@@ -96,3 +100,15 @@ $('#contact').validate({
 								}
 				}
 });
+
+//Font loading
+
+$.getScript("https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js").done(
+		function(){
+			WebFont.load({
+				google: {
+				families: ['Open Sans:400,700', 'Oswald:300']
+			}
+		});
+	}
+);
