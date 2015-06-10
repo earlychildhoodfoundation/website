@@ -31,6 +31,7 @@
 
 
 @media (max-width: $grid-float-breakpoint) {
+	.navbar {display: none;} // hide navbar on mobile since it doesn't scroll to target
 	.container-fluid > .navbar-collapse,
 	.container-fluid > .navbar-header  {
 		margin: 0;
