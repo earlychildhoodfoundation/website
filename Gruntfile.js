@@ -322,6 +322,7 @@ module.exports = function (grunt) {
 						'images/{,*/}*.svg',
 						'{,*/}*.html',
 						'styles/fonts/{,*/}*.*',
+						'files{,*/}*.*',
 						'*.php',
 						'PHPMailer-5.2.10/**/*',
 

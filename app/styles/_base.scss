@@ -14,7 +14,7 @@ overflow-x: hidden;
 }
 
 body {
-font-size: 1.125rem;
+font-size: .9rem;
 background-color: #FFFFFA;
 color: #555;
 }
@@ -22,6 +22,10 @@ color: #555;
 ul,ol {
 list-style-position: inside;
 padding: 0;
+}
+
+.list {
+	line-height: 1;
 }
 
 .list-spaced > li {
@@ -98,28 +102,28 @@ padding: 0;
 .h3 {
 	color: $brand-secondary;
 	font-size: 1.125rem !important;
-	text-transform: uppercase;
+	font-weight: bold;
 	letter-spacing: .06em;
 }
 
 
 .lede {
 	color: #666;
-	font-size: 1.3rem;
+	font-size: 1.15rem;
 	line-height: 1.5;
 	font-weight: 300;
 
 	@media (min-width: $screen-md-min) {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 	}
 
 }
 
 .lede-section {
-	font-size: 1.2rem;
+	font-size: 1rem;
 
 	@media (min-width: $screen-md-min) {
-		font-size: 1.4rem;
+		font-size: 1.1rem;
 	}
 
 }
