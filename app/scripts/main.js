@@ -1,17 +1,27 @@
+'use strict';
+
 // Make h1 span viewport width
-$("#fittext-1").fitText(1.8);
+$('#fittext-1').fitText(1.8);
 
 
 // Fixed positioning for navbar
 var didScroll;
-var lastScroll;
 // What's the offset of the navbar from the top
 var navBar = $('.navbar');
 var navbarPos = navBar.offset().top;
 // on scroll, let the interval function know the user has scrolled
-$(window).scroll(function(event){
+$(window).scroll(function(){
 		didScroll = true;
 });
+
+function hasScrolled() {
+	if ($(document).scrollTop() > navbarPos) {
+		navBar.removeClass('navbar-relative').addClass('navbar-fixed');
+	} else {
+		navBar.removeClass('navbar-fixed').addClass('navbar-relative');
+	}
+}
+
 
 // run hasScrolled() and reset didScroll status
 setInterval(function() {
@@ -20,13 +30,6 @@ setInterval(function() {
 				didScroll = false;
 		}
 }, 100);
-
-function hasScrolled() {
-	if ($(document).scrollTop() > navbarPos)
-		navBar.removeClass('navbar-relative').addClass('navbar-fixed');
-	else
-		navBar.removeClass('navbar-fixed').addClass('navbar-relative');
-}
 
 // create scroll offset for scroll spy
 
@@ -103,7 +106,7 @@ $('#contact').validate({
 
 //Font loading
 
-$.getScript("https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js").done(
+$.getScript('https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js').done(
 		function(){
 			WebFont.load({
 				google: {
@@ -112,3 +115,47 @@ $.getScript("https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js").done(
 		});
 	}
 );
+
+// Determine LOI deadline script
+
+var year = (new Date()).getFullYear(),
+	deadlines = [
+		new Date(year,1,28), // Feb 28
+		new Date(year,4,31), // May 31
+		new Date(year,7,31), // August, 31
+		new Date(year,10,30) // November, 30
+	],
+	months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
+	formattedDeadline,
+	currentDate = new Date(),
+	deadlineIndex,
+	nextDate;
+
+	currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth(),currentDate.getUTCDate(),0,0,0,0); // get rid of time data
+
+	deadlines.forEach(function(deadline,index){
+			 if (currentDate > deadline) {
+				// currentDate is passed date?
+				deadlineIndex = index;
+			 }
+	});
+
+	// deadlineIndex hasn't been set, meaning the currentDate is before the first deadline
+	if (!deadlineIndex && deadlineIndex !== 0) {
+		 nextDate = deadlines[0];
+	}
+
+	 // reached last index, next deadline is the first of the next year
+	else if (deadlineIndex === deadlines.length-1) {
+		 nextDate = deadlines[0];
+		 nextDate.setYear(year+1);
+	}
+
+	// regular scenario, deadline is next after captured index
+	else {
+		nextDate = deadlines[deadlineIndex+1];
+	}
+
+	formattedDeadline = months[nextDate.getMonth()] + ' ' + nextDate.getUTCDate() + ', ' + nextDate.getFullYear();
+
+	$('#dates').text(formattedDeadline);
