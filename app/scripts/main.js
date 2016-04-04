@@ -119,11 +119,10 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js').done(
 // Determine LOI deadline script
 
 var year = (new Date()).getFullYear(),
+
+	// Months are zero based so subtract 1, array so can take multiple datas
 	deadlines = [
-		new Date(year,1,28), // Feb 28
-		new Date(year,4,31), // May 31
-		new Date(year,7,31), // August, 31
-		new Date(year,10,30) // November, 30
+		new Date(year,8,30) // Sep 30
 	],
 	months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
 	formattedDeadline,
