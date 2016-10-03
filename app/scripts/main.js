@@ -122,7 +122,9 @@ var year = (new Date()).getFullYear(),
 
 	// Months are zero based so subtract 1, array so can take multiple datas
 	deadlines = [
-		new Date(year,8,30) // Sep 30
+		new Date(year,0,31), // Jan 31
+		new Date(year,4,31), // May 31
+		new Date(year,8,29) // Sep 29
 	],
 	months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
 	formattedDeadline,
