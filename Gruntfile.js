@@ -323,8 +323,8 @@ module.exports = function (grunt) {
 						'{,*/}*.html',
 						'styles/fonts/{,*/}*.*',
 						'files{,*/}*.*',
-						'*.php',
-						'PHPMailer-5.2.10/**/*',
+						//'*.php',
+						//'PHPMailer-5.2.10/**/*',
 
 					]
 				}, {
@@ -378,7 +378,7 @@ module.exports = function (grunt) {
 				},
 				command: [
 				 'rsync -zavilr --delete --exclude \'.DS_Store\' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhood',
-				 'echo CONTACT-CFEC.PHP is being synced!'
+				 //'echo CONTACT-CFEC.PHP is being synced!'
 				].join('&&')
 			},
 		},
