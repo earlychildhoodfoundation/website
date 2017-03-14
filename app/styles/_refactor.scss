@@ -13,15 +13,22 @@
 }
 
 
-.dummy {
-	height: auto;
-	width: 800px;
-	background-color: #EEE;
-	border-radius:15%;
+.rounded {
+	border-radius:15px;
+}
+
+.rounded-50 {
+	border-radius: 50%;
+}
+
+.rotate-1 {
+	@media(min-width: $screen-sm-min) {
+		transform: rotate(1deg);
+	}
 }
 
 .img-wrapper {
-	@media (min-width: $screen-sm-min) and (max-width: $screen-lg-min) {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-sm-min) {
 		margin-top: 5rem;
 	}
 
@@ -78,4 +85,3 @@
 	margin-left: -0.25em;
 	vertical-align: top;
 }
-
