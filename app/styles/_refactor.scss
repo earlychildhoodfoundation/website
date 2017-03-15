@@ -50,6 +50,20 @@
 }
 
 
+// .media {
+//   display: flex;
+//   align-items: flex-start;
+// }
+//
+// .media-figure {
+//   margin-right: 1em;
+// }
+//
+// .media-body {
+//   flex: 1;
+// }
+
+
 .section {
 	padding-top: 30px;
 	padding-bottom: 60px;
@@ -92,4 +106,12 @@
 	display: inline-block;
 	margin-left: -0.25em;
 	vertical-align: top;
+}
+
+.border-lg-sides {
+	@media (min-width: $screen-lg-min) {
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-color: #abe1ec;
+	}
 }
