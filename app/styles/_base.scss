@@ -14,7 +14,7 @@ overflow-x: hidden;
 }
 
 body {
-font-size: .9rem;
+font-size: 1rem;
 background-color: #FFFFFA;
 color: #555;
 }
@@ -26,6 +26,26 @@ padding: 0;
 
 .list {
 	line-height: 1;
+}
+
+.list-csv > li {
+	display: inline;
+	padding: 0;
+	font-size: 1.1em;
+	line-height: 1;
+}
+
+.list-csv > li:after {
+	content: " / ";
+  color: #dfe0d3;
+  font-size: 2em;
+  position: relative;
+  top: 0.21em;
+  left: .060em;
+}
+
+.list-csv > li:last-child:after {
+	color: transparent;
 }
 
 .list-spaced > li {
@@ -156,5 +176,3 @@ padding: 0;
 	height: auto;
 	width:auto;
 }
-
-

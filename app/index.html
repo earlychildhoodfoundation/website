@@ -136,7 +136,7 @@
 							<h3 class="h3">Policy on Funding Indirect Expenses for Grants</h3>
 							<p>The Foundation will not fund the general allocation of indirect expenditures to a project.  The Board will only approve up to 15% of the project’s direct expenditures for general and administrative expenses that are required for the successful completion of the project.</p>
 							<h3 class="h3">Policy Regarding Multiple Year Funding Requests</h3>
-							<p>Consistent with the Foundation’s mission, as an incubator of innovative research and development directed to improving the general welfare of young children, we will not fund more than the first year of multiple year projects.  It is our belief that having multiple funders, of those worthy projects that demand more sustained efforts, increases the likelihood of their success by ensuring broader oversight and greater long term promotional possibilities.</p>   
+							<p>Consistent with the Foundation’s mission, as an incubator of innovative research and development directed to improving the general welfare of young children, we will not fund more than the first year of multiple year projects.  It is our belief that having multiple funders, of those worthy projects that demand more sustained efforts, increases the likelihood of their success by ensuring broader oversight and greater long term promotional possibilities.</p>
 					</div>
 				</div><!-- /.row -->
 			</div><!-- /.container-fluid -->
@@ -203,108 +203,67 @@
 				<!-- /TODO -->
 			</div>
 		</div><!-- /.container-fluid -->
-		<div class="section section-1 flush-bottom">
+		<div id="vueGrants" class="section section-1 flush-bottom">
+
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1 col-lg-12 col-lg-offset-0">
 						<h2 class="h2" id="grants-awarded">Grants Awarded</h2>
 						<div class="row">
 
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">Providence College</h3>
-								<p>
-									Providence College, located in Providence, Rhode Island, has been awarded a <strong>$44,000</strong> grant to test the effectiveness of play and inquiry-based instruction in early science education.  To support the development of best practices in science education, two types of guidance will be tested, 1) Scaffolding guidance (solution is not presented); and 2) Solution guidance (solution presented).  Other questions to be addressed will be whether play adds any additional benefit over and above the effects of guidance and whether high-ability children respond differently than low-ability children.
-								</p>
+							<div class="col-sm-6 col-lg-4 inline-block" v-for="grant in grants" v-if="grant.visible">
+								<h3 class="h3">{{ grant.organization }}</h3>
+								<p v-for="paragraph in grant.paragraphs" v-html="paragraph"></p>
 							</div>
-
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">University of Florida Research Foundation</h3>
-								<p>
-									The University of Florida Research Foundation, located in Orlando, Florida, has been awarded a <strong>$70,942</strong> grant to explore the effects of second language learning on first language skills for pre-kindergarten students with special needs.  French will be introduced using multimodal teaching techniques which can include technological resources, such as the use of visuals, graphics, animation, and video.
-								</p>
+							<div class="col-sm-12">
+								<h3 class="h3">Previous Recipients</h3>
+								<ul class="list-csv">
+									<li v-for="grant in grants" v-if="!grant.visible">{{ grant.organization }} – {{ grant.amount }}</li>
+								</ul>
+								<div class="row push-top-md push-bottom-lg">
+									<p class="text-center">
+										<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#grant-applicants">
+												<i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>&nbsp;&nbsp;View Recipient Grant Details
+										</button>
+									</p>
+								</div>
 							</div>
-
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">National Center for Families Learning, KY</h3>
-								<p>
-									The National Center for Families Learning, located in Louisville, Kentucky, has been awarded a <strong>$50,979</strong> grant to develop a nature-based learning adventure series for families.   The curriculum, materials and workshops will be piloted through their partnership with public libraries, particularly those in urban areas with a high poverty population and a dearth of nature-based learning opportunities.
-								</p>
-							</div>
-
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">Worldwide Orphans, NJ</h3>
-									<p>Worldwide Orphans, located in Maplewood, New Jersey, has been awarded a <strong>$55,000</strong> grant to develop and pilot an English as a Second Language curriculum, where parents and children participate together.   The curriculum will incorporate Early Childhood Development principles and theory and is targeted for parents of children from birth to five years of age</p>
-							</div>
-
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">Portland State University, OR</h3>
-									<p>Portland State University, located in Portland, Oregon, has been awarded a <strong>$39,683</strong> grant to support Dialogic Storytelling which explores how preschool children in urban, multiethnic, and multilingual Head Start classrooms interact in a child-led storytelling activity called story circles.  The primary outcomes of the study will be to illuminate the affordances of child-led teaching practices like story circles so that early childhood care and education teachers have ways of supporting language and literacy learning that rely on the feelings, interests, and ideas of children.</p>
-							</div>
-
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">Bay Area Discovery Museum</h3>
-								<p>
-									The Bay Area Discovery Museum, located in Sausalito, California, has been awarded a <strong>$50,000</strong> grant to fund the development of the first early childhood education Fab Lab.  Fab Labs began at the Massachusetts Institute of Technology, and have since expanded globally and into middle and high schools.  The early childhood Fab Lab is a novel, model learning environment specifically designed for the youngest children to engage in open-ended activities, pursue individualized interest, and gain familiarity with the next generation of creative tools.  Programs and exhibits will be based on a robust research framework which establishes that children under 5 learn when they are intrinsically motivated, engaged, having fun and active.
-								</p>
-							</div>
-							<div class="col-sm-6 col-lg-4 end inline-block">
-								<h3 class="h3">The Children’s Healthcare of Atlanta Marcus Autism Center</h3>
-								<p>
-									The Children’s Healthcare of Atlanta Marcus Autism Center, located in Atlanta, Georgia, has been awarded a <strong>$25,000</strong> grant to fund the second stage of a research project addressing feeding disorders in children.  Building upon a successful pilot study, an iEAT application will be developed for use by parents to address their child’s feeding disorder.  The iEAT application will help diminish the long wait times and high expenses associated with having feeding disorder treatments in an institutional setting and provide follow-up use by feeding disorder specialists.
-								</p>
-							</div>
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">The Kindling Group</h3>
-								<p>
-									The Kindling Group, located in Chicago, Illinois, has been awarded a <strong>$50,000</strong> grant to fund a feature-length documentary and engagement campaign, <cite>No Small Matter</cite>, highlighting successful center and home based programs and interventions as well as effective parenting methods that best support a young child’s development.  The film will be built around the personal stories of a racially, geographically and economically diverse cast of characters, each of whom represents a key stage in the zero-to-five timeline.
-								</p>
-							</div>
-							<div class="col-sm-6 col-lg-4 end inline-block">
-								<h3 class="h3">ASSET STEM Education</h3>
-								<p>
-									ASSET STEM Education, located in Pittsburgh, Pennsylvania, has been awarded a <strong>$30,000</strong> grant to fund the design and piloting of a professional development session for pre-school teachers that would facilitate future mastery of coding for young children.  The sessions will prepare early childhood educators with content knowledge, competencies and confidence to effectively teach coding concepts and processes, like sequencing and math, to young children.  The first-of-its-kind professional development program will be enhanced through hands-on training with the research based Bee-Bot learning robot.
-								</p>
-							</div>
-							<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">Twin Cities Public Television</h3>
-								<p>
-									Twin Cities Public Television, located in Saint Paul, Minnesota, has been awarded a <strong>$30,000</strong> grant to support the <cite>Brains are Built, Not Born</cite>, multimedia messaging campaign.  The campaign will raise awareness about the importance of early childhood brain development, while also presenting clear, accessible, and inspirational skills to parents.  The project will be designed primarily with and for African American families, although the materials produced will be useful and engaging for all parents.
-								</p>
-						</div>
-						<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">The Massachusetts General Hospital, Department of Psychiatry</h3>
-								<p>
-									The Massachusetts General Hospital, Department of Psychiatry, Think: Kids has been awarded a <strong>$95,569</strong> grant to fund the Giving Collaborative Problem Solving a Head Start project which will focus on preventing early childhood aggression and defiance.   The goals of the project are to reduce parent stress and improve child functioning and behavior, and to develop and evaluate a Collaborative Problem Solving parent group curriculum for children under five who are living in high-risk environments.
-								</p>
-						</div>
-						<div class="col-sm-6 col-lg-4 inline-block">
-								<h3 class="h3">The Florida Institute of Technology, Scott Center for Autism</h3>
-								<p>
-									The Florida Institute of Technology, Scott Center for Autism has been awarded a <strong>$34,200</strong> grant to fund the Ameliorating Developmental Signs in Infants project which will improve ASD diagnosis and treatment and add to the current body of knowledge regarding very early developmental assessment and intervention.  A study will be conducted utilizing a modified diagnosis protocol and caregiver-administered treatment to enhance the developmental outcomes of high-risk infants exhibiting developmental delays.  The goals are to conduct an in-depth analysis of the adaptation of an assessment and progress evaluation instrument – currently used to identify and monitor developmental delays in toddlers — for its use with infants as young as 6 months of age; and investigate the extent to which very early initiation of caregiver-implemented behavioral intervention, taught to caregivers using Behavior Skills Training, is therapeutically beneficial for infants born prematurely.
-								</p>
-						</div>
-						<div class="col-sm-6 col-lg-4 inline-block">
-							<h3 class="h3">Minnesota Children’s Museum</h3>
-							<p>
-								The Minnesota Children’s Museum has been awarded a grant of <strong>$25,000</strong> to fund the <em>Power of Play initiative</em>, a data driven program designed to foster healthy parent interactions with children to best support early childhood learning.  The project will use a three tiered strategy to reach beyond the Museum’s walls and throughout the community to create and support a playful learning environment no matter the setting.   Strategy one is the testing of parenting messages onsite in the Our World exhibit; strategy two will focus on a social media campaign using the hashtag #PlayMoreMN, and strategy three includes the hosting of a national convening on the results of the <em>Power of Play initiative</em> that will be shared with peer museums throughout the United States.
-							</p>
-						</div>
-						<div class="col-sm-6 col-lg-4 inline-block">
-							<h3 class="h3">Peabody Research Institute</h3>
-							<p>
-								The Peabody Research Institute, Vanderbilt University located in Nashville, Tennessee has been awarded a grant of <strong>$22,848</strong> to fund the <em>Illuminating Evidence-Based Pathways to Promoting Young Children’s Prosocial Behaviors Through Early Care and Education</em>.  The goals of the initiative are to provide best practice and program guidelines to help teachers and schools select practices and programs that show real promise for developing prosocial behavior in the specific child populations they work with, and will also focus on identifying effective practices that can be flexibly integrated into the daily fabric of schools, without the expense of prepackaged interventions.
-							</p>
-						</div>
-						<div class="col-sm-6 col-lg-4 inline-block">
-							<h3 class="h3">Oklahoma State University Foundation</h3>
-							<p>
-								The Oklahoma State University Foundation has been awarded a grant of <strong>$100,000</strong> to fund the <em>Preventing Suspension and Expulsion in Early Care and Education through Targeted Professional Development on Social and Emotional Self-Regulation</em>.  The project will identify classroom correlates of suspension and expulsion practices, collect data to determine the needs of early care and education (ECE) teachers, develop an evidence-based professional development program for ECE teachers, and collect preliminary evidence on the effectiveness of the professional development program.  The long-term goal is to develop an evidence-based program model of professional development for toddler early care and education teachers aimed at prevention of these practices that can be replicated in programs nationwide.
-							</p>
-						</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- BEGIN Grant Recipients Modal -->
+			<!-- Modal -->
+			<div class="modal fade" id="grant-applicants" tabindex="-1" role="dialog" aria-labelledby="grantModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header clearfix">
+							<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true">&times;</span>
+									<span class="sr-only">Close</span>
+							</button>
+					</div><!-- /.modal-header -->
+					<div class="container-fluid">
+							<h2 class="h2 text-center" id="grantModalLabel">
+									Previous Recipients
+							</h2>
+							<div class="modal-body push-top-lg">
+
+								<div class="row">
+									<div class="col-sm-6 inline-block" v-for="grant in grants" v-if="!grant.visible">
+										<h3 class="h3">{{ grant.organization }}</h3>
+										<p v-for="paragraph in grant.paragraphs" v-html="paragraph"></p>
+									</div>
+								</row>
+
+							</div><!-- /.modal-body -->
+					</div><!-- /.modal-wrapper -->
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<!-- END MODAL -->
+
 		</div>
 		<div class="section section-2 flush-bottom flush-top">
 			<div class="container-fluid">
@@ -432,10 +391,12 @@
 		<script src="bower_components/jquery-form/jquery.form.js"></script>
 		<script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
 		<script src="bower_components/bower-webfontloader/webfont.js"></script>
+		<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 
-		<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+		<script src="https://unpkg.com/vue@2.2.4"></script>
+
 
 		<!-- Google Analytics-->
 		<script>
@@ -449,6 +410,7 @@
 
 				<!-- build:js({app,.tmp}) scripts/main.js -->
 				<script src="scripts/main.js"></script>
+				<script src="scripts/grants.js"></script>
 				<!-- endbuild -->
 </body>
 </html>
