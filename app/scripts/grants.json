@@ -2,13 +2,6 @@
   "grants": [
     {
       "visible" : true,
-      "organization" : "Providence College",
-      "amount": "$44,000",
-      "paragraphs" : [
-        "Providence College, located in Providence, Rhode Island, has been awarded a <strong>$44,000</strong> grant to test the effectiveness of play and inquiry-based instruction in early science education.  To support the development of best practices in science education, two types of guidance will be tested, 1) Scaffolding guidance (solution is not presented); and 2) Solution guidance (solution presented).  Other questions to be addressed will be whether play adds any additional benefit over and above the effects of guidance and whether high-ability children respond differently than low-ability children."
-      ]
-    },{
-      "visible" : true,
       "organization" : "University of Florida Research Foundation",
       "amount": "$70,942",
       "paragraphs" : [
@@ -30,13 +23,20 @@
       ]
     },{
       "visible" : true,
+      "organization" : "Providence College",
+      "amount": "$44,000",
+      "paragraphs" : [
+        "Providence College, located in Providence, Rhode Island, has been awarded a <strong>$44,000</strong> grant to test the effectiveness of play and inquiry-based instruction in early science education.  To support the development of best practices in science education, two types of guidance will be tested, 1) Scaffolding guidance (solution is not presented); and 2) Solution guidance (solution presented).  Other questions to be addressed will be whether play adds any additional benefit over and above the effects of guidance and whether high-ability children respond differently than low-ability children."
+      ]
+    },{
+      "visible" : true,
       "organization" : "Portland State University, OR",
       "amount": "$39,683",
       "paragraphs" : [
         "Portland State University, located in Portland, Oregon, has been awarded a <strong>$39,683</strong> grant to support Dialogic Storytelling which explores how preschool children in urban, multiethnic, and multilingual Head Start classrooms interact in a child-led storytelling activity called story circles.  The primary outcomes of the study will be to illuminate the affordances of child-led teaching practices like story circles so that early childhood care and education teachers have ways of supporting language and literacy learning that rely on the feelings, interests, and ideas of children."
       ]
     },{
-      "visible" : false,
+      "visible" : true,
       "organization" : "Bay Area Discovery Museum",
       "amount": "$50,000",
       "paragraphs" : [
