@@ -208,7 +208,7 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					src: [
-						'<%= config.dist %>/scripts/{,*/}*.js',
+						'<%= config.dist %>/scripts/{,*/}*.{js}',
 						'<%= config.dist %>/styles/{,*/}*.css',
 						'<%= config.dist %>/images/{,*/}*.*',
 						'<%= config.dist %>/styles/fonts/{,*/}*.*',
@@ -323,6 +323,7 @@ module.exports = function (grunt) {
 						'{,*/}*.html',
 						'styles/fonts/{,*/}*.*',
 						'files{,*/}*.*',
+						'scripts/{,*/}*.json',
 						//'*.php',
 						//'PHPMailer-5.2.10/**/*',
 
