@@ -1,4 +1,4 @@
-var grantsJSONUrl = 'scripts/grants.json?v=1';
+var grantsJSONUrl = 'scripts/grants.json?v=1.1';
 
 var grants = new Vue({
   el: '#vueGrants',
