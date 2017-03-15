@@ -37,6 +37,14 @@
 	}
 }
 
+.img-framed {
+	@media (min-width: $screen-sm-min) {
+		border: 10px solid #fff;
+		box-shadow: 0 0 1px 0 #888;
+	}
+}
+
+
 .img-wrapper-guidelines {
 
 }
