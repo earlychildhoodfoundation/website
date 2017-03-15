@@ -33,13 +33,19 @@ setInterval(function() {
 
 // create scroll offset for scroll spy
 
-var offset = 95;
+// var offset = 95;
+
+// handle offset by applying offset as padding-top: offset and removing it with margin-top: -offset
 
 // scroll to nav id on click
 $('.navbar li a').on('click', function(event) {
 		event.preventDefault();
-		$($(this).attr('href'))[0].scrollIntoView();
-		scrollBy(0, -offset);
+		// loading scrollIntoView polyfill for smooth scrolling
+		$($(this).attr('href'))[0].scrollIntoView({ behavior: 'smooth' });
+
+		// no longer works with polyfill for smooth scrolling
+		//window.scrollBy(0, -offset)
+
 });
 
 // On mobile close the navbar after clicking so that it doesn't cover the content
