@@ -12,8 +12,16 @@ Create a build in the `build/` folder
 
 ## grunt syncstage
 
-deploy to http://jandewilde.org/earlychildhood – Same environment as prod
+Deploy to http://jandewilde.org/earlychildhood – Same environment as prod
 
 ## grunt syncprod
 
 Deploy to http://earlychildhoodfoundation.org
+
+## grunt buildstage
+
+Build and deploy to http://jandewilde.org/earlychildhood – Same environment as prod
+
+## grunt buildprod
+
+Build and deploy to http://earlychildhoodfoundation.org
