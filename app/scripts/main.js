@@ -116,7 +116,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js').done(
 		function(){
 			WebFont.load({
 				google: {
-				families: ['Open Sans:400,700', 'Oswald:300']
+				families: ['Oswald:300']
 			}
 		});
 	}
