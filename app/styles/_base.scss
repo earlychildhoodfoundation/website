@@ -24,8 +24,18 @@ list-style-position: inside;
 padding: 0;
 }
 
+p {
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
 .list {
-	line-height: 1;
+	line-height: 1.5;
+	margin-bottom: 2rem;
+}
+
+.list li {
+	margin-bottom: 1rem;
 }
 
 .list-csv > li {
@@ -136,8 +146,8 @@ padding: 0;
 .lede {
 	color: #666;
 	font-size: 1.15rem;
-	line-height: 1.5;
-	font-weight: 600;
+	line-height: 1.8;
+	font-weight: 500;
 
 	@media (min-width: $screen-md-min) {
 		font-size: 1.2rem;
