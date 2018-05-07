@@ -1,42 +1,114 @@
 {
   "grants": [
-    {
-      "visible" : true,
+  {
+      "visible": true,
+      "organization": "AJ Drexel Autism Institute",
+      "amount": "$53,000",
+      "paragraphs": ["The AJ Drexel Autism Institute, located at Drexel University in Philadelphia, Pennsylvania, has been awarded <strong>$53,000</strong> to fund Communication in Autism Parent Coaching Program (CAPCP). The funding will deliver and assess a novel parent training program developed by researchers at the Autism Institute that will improve communication skills in minimally verbal ASD children. CAPCP is based on performance feedback procedures and video demonstrations to facilitate parents’ acquisition and successful delivery of evidence-based behavioral strategies targeting communication skills in ASD children who do not use language."
+      ]
+    },{
+      "visible": true,
+      "organization": "Smithsonian Center for Learning and Digital Access",
+      "amount": "$40,000",
+      "paragraphs": ["The Smithsonian Center for Learning and Digital Access, located in Washington, DC, has been awarded <strong>$40,000</strong> to fund the development of downloadable print-and-play card games appropriate for young children. These games will engage children in examining, sorting, and classifying images of scientific specimens and historical artifacts. While playing these games, they will make observations about distinctive features, group images into categories, and learn new content vocabulary in the sciences and social sciences."
+      ]
+    },{
+      "visible": true,
+      "organization": "Hope College",
+      "amount": "$32,000",
+      "paragraphs": ["Hope College, located in Holland, Michigan, has been awarded <strong>$32,000</strong> to fund the study of sleep deprivation in preschoolers. This will be done through the examination of the relationship between preschoolers’ sleep hygiene and heath and welfare, including examining diet and amount of nighttime artificial light. Children will keep a sleep journal, complete a Children’s Sleep Hygiene Scale before and after the implementation period, record detailed quantitative measurements by wearing a Fitbit©, along with other children, parent, and teacher assessments. The study will benefit the health, learning and play, education, development, and quality of life in children and educate parents / teachers on how to encourage healthy sleep habits."
+      ]
+    },{
+      "visible": true,
+      "organization": "Metropolitan Center",
+      "amount": "$33,333",
+      "paragraphs": ["The Metropolitan Center for Research on Equity and the Transformation of Schools, located at New York University (Metro Center), has been awarded <strong>$33,333</strong> to fund the design and implementation of a professional development program for Pre-K teachers that fosters the development of culturally relevant play for young children. The PD program will center on a series of short documentaries, created as part of the project, featuring teachers planning, implementing, and engaging culturally relevant play. Documentaries will address key themes to which PreK teachers should attend in designing opportunities for culturally relevant play in their classrooms."
+      ]
+    },{
+      "visible": true,
+      "organization": "George Mason University",
+      "amount": "$40,000",
+      "paragraphs": ["George Mason University, located in Fairfax, Virginia, has been awarded <strong>$40,000</strong> to fund the exploration and determination of which aspects of representative pretend play are most conductive to children’s learning. A series of studies will explore two forms of learning often gained from pretend play: 1) social categorization and 2) words and facts. In doing so, researchers can also discover whether social learning and cognitive learnings are differently affected by level of embodiment."
+      ]
+    },{
+      "visible": true,
+      "organization": "National Academy of Sciences",
+      "amount": "$50,000",
+      "paragraphs": ["National Academy of Sciences, located in Washington, DC, has been awarded <strong>$50,000</strong> to fund a consensus study on financing early care and education with a highly qualified workforce. NAS will produce a report to make recommendations for concrete, implementable funding strategies in the public and private sectors at the national, state, and local levels to support early care and education with a highly qualified workforce for children from birth through kindergarten entry across settings including child care, center-based preschool, and school based prekindergarten."
+      ]
+    },{
+      "visible": false,
+      "organization": "South End Community Health Center",
+      "amount": "$50,000",
+      "paragraphs": ["South End Community Health Center, located in Boston, Massachusetts, has been awarded <strong>$50,000</strong> to support the pilot phase of SECHC’s ABS initiative, designed to meet the needs of the youngest and most vulnerable members of our community. ABS is a community-informed, early childhood intervention that offers an integrated approach to children’s health and well-being. It does this through collaboration between the two institutions that provide the most touch points, and therefore the greatest impacts, on young children: healthcare and education."
+      ]
+    },{
+      "visible": false,
+      "organization": "MassAudubon",
+      "amount": "$37,500",
+      "paragraphs": ["Massachusetts Audubon Society, Inc., located in Lincoln, Massachusetts, has been awarded <strong>$37,500</strong> to fund Learning STEMS from Nature. This project will design, implement, evaluate, and disseminate a curriculum framework for integrating nature-based teaching and learning into traditional early childhood education programs. This project’s primary objective is to share the benefits of nature play and learning with children from all backgrounds through the development of integrated nature-based curriculum units, professional development for early childhood educators, and parent-specific resources to support early childhood learning and play in nature."
+      ]
+    },{
+      "visible": false,
+      "organization": "Rutgers University Foundation",
+      "amount": "$32,000",
+      "paragraphs": ["Rutgers University Foundation, located in New Brunswick, New Jersey, has been awarded <strong>$32,000</strong> to fund a project that will determine which screening tools are most effective for use in pediatric primary care settings. A systematic review and meta-analysis will develop suggested best practices for social determinants of health-related economic stability screening tools including those for poverty, food insecurity, parental unemployment, and housing insecurity for use by pediatricians, pediatric nurse practitioners. The information collected will provide guidance for pediatric clinicians and policy makers on how to best identify and intervene with children who are experiencing economic deprivation."
+      ]
+    },{
+      "visible": false,
+      "organization": "North American Association for Environmental Education",
+      "amount": "$31,500",
+      "paragraphs": ["North American Association for Environmental Education (NAAEE), located in Washington, DC, has been awarded <strong>$31,500</strong> to fund the creation of the Nature-Based Early Childhood Education Best Practice Guidebook. The publication will guide new and established programs in the areas of safety and risk management, curriculum, learning spaces, and program administration."
+      ]
+    },{
+      "visible": false,
+      "organization": "Tufts University",
+      "amount": "$64,865",
+      "paragraphs": ["Friedman School of Nutrition Science and Policy at Tufts University, located in Lancaster, Pennsylvania, has been awarded <strong>$64,865</strong> to fund a physical literacy curriculum for early childcare providers. The goals of the program are to increase children’s physical literacy and physical activity levels including total volume and minutes of moderate-to vigorous physical activity, and their early literacy skills. Also, to increase educator’s knowledge of physical literacy, motor competence and cognitive development and educator’s self-efficacy and acceptability to implement a physical literacy program in an early childcare setting. The program will also increase parent awareness of physical literacy, motor competence and cognitive development."
+      ]
+    },{
+      "visible": false,
+      "organization": "Yale Child Study Center",
+      "amount": "$82,000",
+      "paragraphs": ["Yale Child Study Center at Yale University, located in New Haven, Connecticut, has been awarded <strong>$82,000</strong> to fund research that aims to address the issue of implicit bias and preschool expulsions with an intervention study. Preschool teachers will be randomly assigned to either receive professional development training and support on the CHILD Toolkit, or assigned to the control group. In the study, it is hypothesized that, compared to a control group, teachers who are CHILD-trained will: (1) foster mentally healthier learning environments, (2) report lower stress, burnout, and depression, (3) be less likely to employ exclusionary discipline practices, and (4) have children who display better school readiness skills."
+      ]
+    },{
+      "visible" : false,
       "organization" : "University of Central Florida Research Foundation",
       "amount": "$70,942",
       "paragraphs" : [
         "The University of Central Florida Research Foundation, located in Orlando, Florida, has been awarded a <strong>$70,942</strong> grant to explore the effects of second language learning on first language skills for pre-kindergarten students with special needs.  French will be introduced using multimodal teaching techniques which can include technological resources, such as the use of visuals, graphics, animation, and video."
       ]
     },{
-      "visible" : true,
+      "visible" : false,
       "organization" : "National Center for Families Learning, KY",
       "amount": "$50,979",
       "paragraphs" : [
         "The National Center for Families Learning, located in Louisville, Kentucky, has been awarded a <strong>$50,979</strong> grant to develop a nature-based learning adventure series for families.   The curriculum, materials and workshops will be piloted through their partnership with public libraries, particularly those in urban areas with a high poverty population and a dearth of nature-based learning opportunities."
       ]
     },{
-      "visible" : true,
+      "visible" : false,
       "organization" : "Worldwide Orphans, NJ",
       "amount": "$55,000",
       "paragraphs" : [
         "Worldwide Orphans, located in Maplewood, New Jersey, has been awarded a <strong>$55,000</strong> grant to develop and pilot an English as a Second Language curriculum, where parents and children participate together.   The curriculum will incorporate Early Childhood Development principles and theory and is targeted for parents of children from birth to five years of age"
       ]
     },{
-      "visible" : true,
+      "visible" : false,
       "organization" : "Providence College",
       "amount": "$44,000",
       "paragraphs" : [
         "Providence College, located in Providence, Rhode Island, has been awarded a <strong>$44,000</strong> grant to test the effectiveness of play and inquiry-based instruction in early science education.  To support the development of best practices in science education, two types of guidance will be tested, 1) Scaffolding guidance (solution is not presented); and 2) Solution guidance (solution presented).  Other questions to be addressed will be whether play adds any additional benefit over and above the effects of guidance and whether high-ability children respond differently than low-ability children."
       ]
     },{
-      "visible" : true,
+      "visible" : false,
       "organization" : "Portland State University, OR",
       "amount": "$39,683",
       "paragraphs" : [
         "Portland State University, located in Portland, Oregon, has been awarded a <strong>$39,683</strong> grant to support Dialogic Storytelling which explores how preschool children in urban, multiethnic, and multilingual Head Start classrooms interact in a child-led storytelling activity called story circles.  The primary outcomes of the study will be to illuminate the affordances of child-led teaching practices like story circles so that early childhood care and education teachers have ways of supporting language and literacy learning that rely on the feelings, interests, and ideas of children."
       ]
     },{
-      "visible" : true,
+      "visible" : false,
       "organization" : "Bay Area Discovery Museum",
       "amount": "$50,000",
       "paragraphs" : [
