@@ -324,14 +324,16 @@ module.exports = function (grunt) {
 						'styles/fonts/{,*/}*.*',
 						'files{,*/}*.*',
 						'scripts/{,*/}*.json',
+						'.htaccess',
 						//'*.php',
 						//'PHPMailer-5.2.10/**/*',
 
 					]
-				}, {
-					src: 'node_modules/apache-server-configs/dist/.htaccess',
-					dest: '<%= config.dist %>/.htaccess'
-				}, {
+				}, //{
+					//src: 'node_modules/apache-server-configs/dist/.htaccess',
+					//dest: '<%= config.dist %>/.htaccess'
+				//},
+				{
 					expand: true,
 					dot: true,
 					cwd: '.',
