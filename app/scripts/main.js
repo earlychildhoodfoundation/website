@@ -41,7 +41,11 @@ setInterval(function() {
 $('.navbar li a').on('click', function(event) {
 		event.preventDefault();
 		// loading scrollIntoView polyfill for smooth scrolling
-		$($(this).attr('href'))[0].scrollIntoView({ behavior: 'smooth' });
+		$($(this).attr('href'))[0].scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		  inline: 'nearest'
+		});
 
 		// no longer works with polyfill for smooth scrolling
 		//window.scrollBy(0, -offset)
