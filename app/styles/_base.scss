@@ -192,3 +192,9 @@ p {
 	height: auto;
 	width:auto;
 }
+
+@media (min-width: $screen-md-min) {
+	.columns-2-md {
+		columns: 2;
+	}
+}
