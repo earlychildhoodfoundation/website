@@ -373,14 +373,14 @@ module.exports = function (grunt) {
 						stdout: true
 				},
 				command:
-				 'rsync -zavilr --delete --exclude \'.DS_Store\' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhoodfoundation'
+				 'rsync -zavilr --delete --exclude \'.DS_Store\' ./dist/ jandewil@jandewilde.org:/home4/jandewil/public_html/earlychildhoodfoundation'
 			},
 			syncstage: {
 				options: {
 						stdout: true
 				},
 				command: [
-				 'rsync -zavilr --delete --exclude \'.DS_Store\' ./dist/ jandewil@jandewilde.org:/home1/jandewil/public_html/earlychildhood',
+				 'rsync -zavilr --delete --exclude \'.DS_Store\' ./dist/ jandewil@jandewilde.org:/home4/jandewil/public_html/earlychildhood',
 				 //'echo CONTACT-CFEC.PHP is being synced!'
 				].join('&&')
 			},
