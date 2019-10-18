@@ -14,7 +14,7 @@ overflow-x: hidden;
 }
 
 body {
-font-size: 1rem;
+font-size: 1.1rem;
 background-color: #FFFFFA;
 color: #555;
 }
@@ -107,8 +107,8 @@ p {
 .h1,
 .h2,
 .h3 {
-	margin-bottom: 20px;
-	margin-top: 30px;
+	margin-bottom: 15px;
+	margin-top: 20px;
 	font-family: $title-font;
 	font-weight: 300;
 	line-height:1.5;
@@ -124,6 +124,7 @@ p {
 	font-size: 1.5rem;
 	padding-top: 80px; //for scrolling with JS
 	margin-top: -80px; //for scrolling with JS
+	margin-bottom: 25px;
 }
 
 .h2-hero {
@@ -134,8 +135,8 @@ p {
 .h3 {
 	color: $brand-secondary;
 	font-size: 1.125rem !important;
-	font-weight: bold;
-	letter-spacing: .06em;
+	font-weight: 500;
+	font-family: inherit;
 }
 
 .h3-lg {
