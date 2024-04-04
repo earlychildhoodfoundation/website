@@ -1,0 +1,24 @@
+{
+  "name": "aquarium-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod:build": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --minify && npx @11ty/eleventy --quiet",
+    "www:serve": "npx @11ty/eleventy --serve --incremental --quiet --ignore-initial",
+    "debug:serve": "node --inspect node_modules/.bin/eleventy --serve --incremental --ignore-initial",
+    "css:dev": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "js-yaml": "^4.1.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {}
+}
