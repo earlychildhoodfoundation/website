@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr" id="top">
+<html lang="en-US" dir="ltr" id="top" class="scroll-smooth">
   <head>
     {% block head %}
       {% include 'head.njk' %}
@@ -7,6 +7,9 @@
   </head>
   <body {% if bodyClasses %}class="{{ bodyClasses }}"{%- endif -%}>
     <a href="#main" id="skip-link">Skip to main content <span aria-hidden>↓</span></a>
+    {%- block header %}
+      {%- include 'global-header.njk' %}
+    {%- endblock %}
     {% block global_nav %}
       {% include 'global-nav.njk' %}
     {% endblock %}

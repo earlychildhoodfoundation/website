@@ -1,0 +1,37 @@
+---
+permalink: /index.html
+---
+
+{% extends './_layouts/default.njk' %} 
+
+{%- block main %}
+<div class="grid grid-cols-8 gap-4 text-slate-700 max-w-screen-xl mx-auto mt-8">
+  <div class="col-start-1 col-span-5 text-xl leading-relaxed">
+    <p class="text-2xl font-semibold leading-normal"><span class="text-2xl font-bold text-emerald-600">The Caplan Foundation for Early Childhood</span> is an incubator of promising research and development projects that appear likely to improve the welfare of young children, from infancy through 7 years, in the United States.
+    </p>
+    <p class="mt-4">Welfare is broadly defined to support, acculturation, societal integration and childcare. Grants are only made if a successful project outcome will likely be of significant interest to other professionals, within the grantee’s field of endeavor, and would have a direct benefit and potential national application.</p><p class="mt-4">The Foundation’s goal is to provide seed money to implement those imaginative proposals that exhibit the greatest chance of improving the lives of young children, on a national scale. Because of the Foundation’s limited funding capability, it seeks to maximize a grant's potential impact.</p>
+  </div>
+  
+
+  <p class="col-start-7 col-span-2 text-lg">The next deadline for submitting a Letter of Interest (LOI) is <b id="dates">{{ site.nextDeadline }}</b></p>
+</div>
+{%- endblock %} 
+{%-block scripts %}
+<script>
+  (function (b, o, i, l, e, r) {
+    undl;
+    b.GoogleAnalyticsObject = l;
+    b[l] ||
+      (b[l] = function () {
+        (b[l].q = b[l].q || []).push(arguments);
+      });
+    b[l].l = +new Date();
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = '//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r);
+  })(window, document, 'script', 'ga');
+  ga('create', 'UA-4524438-13');
+  ga('send', 'pageview');
+</script>
+{% endblock %}
