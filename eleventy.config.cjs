@@ -1,5 +1,5 @@
 const markdownIt = require('markdown-it');
-// const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
+const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
 const prettier = require('./src/transforms/prettier.js');
 
 module.exports = function (eleventyConfig) {
@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
   };
 
   // Plugins
-  // eleventyConfig.addPlugin(bundlerPlugin);
+  eleventyConfig.addPlugin(bundlerPlugin);
 
   eleventyConfig.addFilter('toHeading', function (value) {
     // Split the string on camelCase boundaries, then capitalize the first letter of each word
