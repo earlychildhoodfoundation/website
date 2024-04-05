@@ -17,20 +17,11 @@ module.exports = function (eleventyConfig) {
 
   // Passthroughs
   const stuffToCopy = [
+    'src/assets/styles/styles.css',
     'src/assets/images',
     'src/assets/files',
     'src/assets/fonts',
     { 'src/assets/siteroot': '/' },
-    {
-      'node_modules/chart.js/dist/chart.umd.js': 'assets/scripts/chart.umd.js',
-    },
-    {
-      'node_modules/@11ty/is-land/is-land.js': 'assets/scripts/is-land.js',
-    },
-    {
-      'node_modules/@zachleat/snow-fall/snow-fall.js':
-        'assets/scripts/snow-fall.js',
-    },
   ];
 
   stuffToCopy.forEach((stuff) => {

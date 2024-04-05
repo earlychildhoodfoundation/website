@@ -10,6 +10,15 @@
   --grid-gutter-width: 50px;
 }
 
+/* oswald-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/oswald-v53-latin-300.woff2') format('woff2');
+}
+
 html,
 body {
   font: 100%/1.6 var(--base-font);
