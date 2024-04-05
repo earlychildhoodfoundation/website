@@ -26,30 +26,6 @@
   }
 }
 
-/* html,
-  body {
-    font: 100%/1.6 var(--base-font);
-    overflow-x: hidden;
-  }
-
-  body {
-    background-color: #fffffa;
-    color: #555;
-    font-size: 1.1rem;
-  }
-
-  ul,
-  ol {
-    list-style-position: inside;
-    padding: 0;
-  }
-
-  p {
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-} */
-
 @layer components {
   /* SKIP LINK */
   #skip-link {
@@ -68,16 +44,6 @@
   #skip-link:focus {
     margin-top: 1.25rem;
     transform: translate(-50%, 0);
-  }
-
-  /* 
-  .list {
-    line-height: 1.5;
-    margin-bottom: 2rem;
-  }
-
-  .list li {
-    margin-bottom: 1rem;
   }
 
   .list-csv > li {
@@ -100,12 +66,8 @@
     color: transparent;
   }
 
-  .list-spaced > li {
-    margin-bottom: 1.5rem;
-  }
-
   .list-count {
-    counter-reset: counter; 
+    counter-reset: counter;
     list-style: none;
   }
 
@@ -125,98 +87,5 @@
     display: table-cell;
     padding-left: 1em;
     vertical-align: middle;
-  } 
-  */
-}
-
-/* TYPOGRAPHY */
-/* .h1,
-.h2,
-.h3 {
-  font-family: var(--title-font);
-  font-weight: 300;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-.h1 {
-  color: var(--white);
-  font-size: 5.6vw;
-  letter-spacing: 0.1em;
-}
-
-.h2 {
-  color: var(--brand-primary);
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  margin-top: -80px; 
-  padding-top: 80px;
-}
-
-.h2-hero {
-  color: #f7bebe;
-  font-family: 'open sans', sans-serif;
-}
-
-.h3 {
-  color: var(--brand-secondary);
-  font-family: inherit;
-  font-size: 1.125rem !important;
-  font-weight: 500;
-}
-
-.h3-lg {
-  font-size: 1.4375rem !important;
-}
-
-.lede {
-  color: #666;
-  font-size: 1.15rem;
-  font-weight: 500;
-  line-height: 1.8;
-} 
-
-.container-fluid {
-  max-width: 1300px;
-}
-*/
-
-/* BRANDING AREA */
-
-/* .branding {
-  background-color: var(--brand-hero-bg-color);
-  height: 100%;
-  padding-top: 3vh;
-  position: relative;
-  width: 100%;
-}
-
-.branding-center {
-  height: auto;
-  margin: 0 auto;
-  max-height: 87vh;
-  width: auto;
-}
-
-@media (min-width: 768px) {
-  .columns-2-md {
-    columns: 2;
   }
-} */
-
-/* FORMS */
-
-/* label {
-  width: 100%;
 }
-
-input,
-textarea {
-  box-shadow: none !important;
-  font-weight: 300;
-}
-
-input[type='file'] {
-  line-height: 1ex !important;
-} */
