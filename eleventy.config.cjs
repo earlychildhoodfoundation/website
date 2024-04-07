@@ -1,6 +1,7 @@
 const markdownIt = require('markdown-it');
 const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
 const prettier = require('./src/transforms/prettier.js');
+const yaml = require('js-yaml');
 
 module.exports = function (eleventyConfig) {
   const mdOptions = {
@@ -114,6 +115,9 @@ module.exports = function (eleventyConfig) {
 
   // Shortcodes
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
+
+  // Add Custom Data Extensions YAML
+  eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 
   return {
     dir: {
