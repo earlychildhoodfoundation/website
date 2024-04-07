@@ -103,6 +103,10 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromISO(dateStr, { zone: 'utc' }).toFormat('MMM dd');
   });
 
+  eleventyConfig.addFilter('commaNumber', function (value) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  });
+
   eleventyConfig.addNunjucksFilter('getData', function (value) {
     return this.ctx[value];
   });
