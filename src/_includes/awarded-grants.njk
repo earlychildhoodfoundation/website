@@ -1,0 +1,13 @@
+<section class="text-2xl bg-slate-200 px-6" tabindex="-1">
+  <h2 id="grants-awarded" class="font-display text-red-600 text-3xl">Grant Recipients</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[2px] rounded-2xl overflow-clip">
+    {%- for grant in grants | sort(false, false, 'organization') %}
+      <div class="smol-card-component bg-blue-800 text-white">
+        <div class="text-lg px-4 text-blue-200">{{ grant.organization }}</div>
+        <div class="text-lg px-4 text-blue-200">2024</div>
+        <div class="text-2xl px-4 py-4 font-semibold">{{ grant.project }}</div>
+        <div class="font-display text-3xl mt-auto px-4 pt-2">${{ grant.amount | commaNumber }}</div>
+      </div>
+    {%- endfor %}
+  </div>
+</section>
