@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr" id="top" class="scroll-smooth">
+<html lang="en-US" dir="ltr" id="top">
   <head>
     {% block head %}
       {% include 'head.njk' %}
@@ -13,7 +13,8 @@
     {% block global_nav %}
       {% include 'global-nav.njk' %}
     {% endblock %}
-    <main id="main" class="{{ mainClasses }}">
+    {# adding tabindex=”-1″ to the target of in-page links, so focus isn’t lost after the link is followed. #}
+    <main id="main" class="{{ mainClasses }}" tabindex="-1">
       {%- block main %}{%- endblock %}
     </main>
     {%- block footer %}
