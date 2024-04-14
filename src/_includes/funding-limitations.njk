@@ -1,0 +1,46 @@
+<section class="px-6 text-2xl bg-gradient-to-b from-slate-50 to-sky-200 [clip-path:polygon(0_0,_100%_0,_100%_99%,_0_100%)] ">
+  <h2 id="limitations" class="font-display text-red-600 text-3xl">Funding Limitations</h2>
+  <h3>​The Foundation will <b>not</b> fund:</h3>
+  <ul class="columns-2 list-disc marker:text-orange-500 list-image-[url(/assets/images/icon-no-symbol.svg)] leading-loose">
+    {%- for limitation in data.limitations %}
+      <li>{{limitation}}</li>
+    {%- endfor %}
+  </ul>
+
+  <p class="mt-4">
+    Furthermore, the Foundation will only fund grant applications that define
+    measurable outcomes, include credible methods for documenting and assessing
+    results, provide for financial accountability in the application of funds,
+    and include detailed, prudent implementation budgets.
+  </p>
+  <p class="mt-4">
+    <strong
+      >All letters of inquiry that don't comply with the limitations will be
+      rejected.</strong
+    >
+  </p>
+  <div class="grid grid-cols-2 gap-12 mt-12">
+    <div class="smol-card-component bg-slate-100 px-8 pt-4 pb-8">
+      <h3 class="text-cyan-600 font-bold">Policy on Funding Indirect Expenses for Grants</h3>
+      <p>
+      The Foundation will not fund arbitrary or excessive allocations of indirect
+      expenses even if a project is worthy. The Foundation’s Board will only
+      approve a maximum of 15% of a project’s direct expenses, when earmarked as
+      general and/or administrative overhead.
+    </p>
+    </div>
+
+    <div class="smol-card-component bg-slate-100 px-8 pt-4 pb-8">
+      <h3 class="text-cyan-600 font-bold">Policy Regarding Multiple Year Funding Requests</h3>
+      <p>
+    Consistent with the Foundation’s mission, as an
+    <b>incubator of innovative research and development</b> directed to
+    improving the general welfare of young children, we will not fund more than
+    the first year of multiple year projects. It is our belief that having
+    multiple funders, of those worthy projects that demand more sustained
+    efforts, increases the likelihood of their success by ensuring broader
+    oversight and greater long term promotional possibilities.</p>
+    </div>
+  </div>
+
+</section>
