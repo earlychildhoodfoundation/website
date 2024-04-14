@@ -1,0 +1,24 @@
+<footer>
+  <img
+  class="bg-red-600"
+  src="{{ site.imgDir }}logo-optimized.svg"
+  width="100"
+  height="100"
+  aria-hidden
+/>
+
+  <div class="h-card">
+    <p class="p-org">{{site.name}}</p>
+    <p class="p-name">{{ site.contact.name }}</p>
+    <div class="h-adr">
+      <p class="p-street-address">{{ site.contact.address }}</p>
+      <p class="p-locality">{{ site.contact.city }}</p>
+      <p class="p-region">{{ site.contact.state }}</p>
+      <p class="p-postal-code">{{ site.contact.zip }}</p>
+    </div>
+    <a class="u-email" href="mailto:{{ site.contact.email }}"
+    >{{ site.contact.email }}</a
+  >
+    <p class="p-tel">{{ site.contact.phone }}</p>
+  </div>
+</footer>
