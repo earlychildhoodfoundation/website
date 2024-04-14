@@ -11,6 +11,8 @@
     --brand-primary: hsl(0, 100%, 61%);
     --brand-secondary: hsl(194, 100%, 33%);
     --brand-hero-bg-color: #fa4242;
+    --rgb-yellow: 255, 226, 0;
+    --rgb-purple: 88, 86, 214;
 
     --navbar-link-color: hsl(0, 0%, 0%);
     --grid-gutter-width: 50px;
@@ -23,6 +25,57 @@
     font-style: normal;
     font-weight: 300;
     src: url('/assets/fonts/oswald-v53-latin-300.woff2') format('woff2');
+  }
+
+  html {
+    hanging-punctuation: first last;
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 6rem;
+    scrollbar-gutter: stable both-edges;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-block-end: 1em;
+    margin-block-start: 1.5em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  main p + p {
+    margin-block-start: 1em;
+  }
+
+  input,
+  textarea {
+    hanging-punctuation: none;
+  }
+
+  mark,
+  .text-highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(var(--rgb-yellow), 0) 0,
+      rgba(var(--rgb-yellow), 0.75) 5%,
+      rgba(var(--rgb-yellow), 0.25) 95%,
+      rgba(var(--rgb-yellow), 0) 100%
+    );
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+  }
+  .text-highlight--dark {
+    background: linear-gradient(
+      90deg,
+      rgba(var(--rgb-purple), 0) 0,
+      rgba(var(--rgb-purple), 0.75) 5%,
+      rgba(var(--rgb-purple), 0.25) 95%,
+      rgba(var(--rgb-purple), 0) 100%
+    );
   }
 }
 
@@ -71,12 +124,21 @@
     list-style: none;
   }
 
+  .list-count > li {
+    align-items: center;
+    display: flex;
+    padding-block: 0.75em;
+  }
+
   .list-count-counter::before {
-    background-color: #eee;
+    /* background-color: #eee; */
+    background-color: theme('colors.zinc.200');
     border-radius: 100%;
+    color: theme('colors.zinc.800');
     content: counter(counter);
     counter-increment: counter;
     display: inline-block;
+    font-family: var(--title-font);
     height: 3em;
     line-height: 3em;
     text-align: center;
@@ -87,5 +149,49 @@
     display: table-cell;
     padding-left: 1em;
     vertical-align: middle;
+  }
+
+  .smol-card-component {
+    --img-ratio: 3/2;
+    /* border: 1px solid theme('colors.zinc.200'); */
+    /* border-radius: theme('borderRadius.2xl'); */
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .smol-card-component > img {
+    aspect-ratio: var(--img-ratio);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .smol-card-component > img:first-child {
+    border-radius: theme('borderRadius.2xl') theme('borderRadius.2xl') 0 0;
+  }
+
+  .smol-card-component > img:last-child {
+    border-radius: 0 0 theme('borderRadius.2xl') theme('borderRadius.2xl');
+    margin-top: auto;
+  }
+
+  .smol-card-component > :not(img) {
+    /* Prevent typography "orphans" */
+    text-wrap: pretty;
+  }
+
+  .smol-card-component > :not(img):first-child {
+    margin-top: theme('spacing.4');
+  }
+
+  /* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+  .smol-card-component > :last-of-type:not(img, h2, h3, h4) {
+    margin-bottom: theme('spacing.4');
+  }
+
+  .smol-card-component > a {
+    align-self: start;
   }
 }
