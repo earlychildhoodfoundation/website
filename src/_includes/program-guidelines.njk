@@ -8,7 +8,7 @@
 }
 {% endcss %}
 
-<section class="lg:pt-6 pb-6 lg:pb-24 2xl:pb-24 bg-gradient-to-b from-slate-50 to-sky-200 [clip-path:polygon(0_0,_100%_0,_100%_99%,_0_100%)] lg:[clip-path:polygon(0_0,_100%_0,_100%_96%,_0_100%)] 2xl:[clip-path:polygon(0_0,_100%_0,_100%_93%,_0_100%)]" tabindex="-1">
+<section class="lg:pt-6 pb-6 lg:pb-24 2xl:pb-24 bg-gradient-to-b from-slate-50 dark:from-slate-800 dark:to-sky-700 [clip-path:polygon(0_0,_100%_0,_100%_99%,_0_100%)] lg:[clip-path:polygon(0_0,_100%_0,_100%_96%,_0_100%)] 2xl:[clip-path:polygon(0_0,_100%_0,_100%_93%,_0_100%)]" tabindex="-1">
   <h2 id="program-guidelines" class="font-display text-red-600 text-3xl">Program Guidelines</h2>
 
   <p>The Foundation provides funding in the following areas</p>
@@ -18,9 +18,9 @@
       <li class="px-6 pt-4 pb-12 lg:rounded-2xl md:flex-grow-0 md:flex-shrink 2xl:flex-grow lg:basis-[490px] xl:basis-[550px] {{ guideline.translationClass }} column-index-{{loop.index}}">
         <img alt="" src="{{ site.imgDir }}{{ guideline.image.file }}" class=" p-3 bg-slate-100 border border-slate-200 rounded-2xl mx-auto {{ guideline.image.rotationClass }} drop-shadow-xl 2xl:-translate-y-12"/>
         <div class="relative mt-4 {{guideline.paragraphClass}}">
-          <h3 class="text-3xl font-semibold {{ guideline.titleClass }}">{{ guideline.title }}</h3>
+          <h3 class="text-3xl font-semibold text-sky-800 dark:text-cyan-300">{{ guideline.title }}</h3>
           {%- for paragraph in guideline.paragraphs %}
-            <p class="mt-4 text-2xl">{{ paragraph | safe }}</p>
+            <p class="mt-4 text-2xl dark:text-sky-100">{{ paragraph | safe }}</p>
           {%- endfor %}
         </div>
       </li>
