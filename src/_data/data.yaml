@@ -1,32 +1,32 @@
 guidelines:
-  - title: 'Early Childhood Welfare'
-    image:
-      file: 'child-welfare.jpg'
-      rotationClass: 'md:-rotate-[3deg]'
-    translationClass: '2xl:translate-y-[5%]'
-    paragraphClass: 'text-sky-900'
-    titleClass: 'text-sky-800'
-    paragraphs:
-      - 'Children can only reach their full potential when all aspects of their intellectual, emotional and physical development are optimally supported.'
-      - 'Providing a safe and nurturing environment is essential as is imparting the skills of social living in a culturally diverse world. Therefore, the Foundation supports projects that seek to perfect child rearing practices and to identify models that can provide creative, caring environments in which all young children thrive.'
-  - title: 'Early Childhood Education and Play'
-    image:
-      file: 'education-and-play.jpg'
-      rotationClass: 'md:rotate-[3deg]'
-    paragraphClass: 'text-sky-900'
-    titleClass: 'text-sky-800'
-    paragraphs:
-      - 'Research shows that children need to be stimulated as well as nurtured, early in life, if they are to succeed in school, work and life. That preparation relates to every aspect of a child’s development, from birth to age seven, and everywhere a child learns – at home, in childcare settings and in preschool.'
-      - 'We seek to improve the quality of both early childhood teaching and learning, through the development of innovative curricula and research based pedagogical standards, as well as the design of imaginative play materials and learning environments.'
   - title: 'Parenting Education'
     image:
       file: 'parenting-education.jpg'
       rotationClass: 'md:-rotate-[2deg]'
-    translationClass: '2xl:-translate-y-[5%]'
-    paragraphClass: 'text-sky-900'
-    titleClass: 'text-sky-800'
+      borderColorClass: 'border-red-500'
+    translationClass: '2xl:translate-y-[5%]'
+    titleClass: 'text-white'
     paragraphs:
-      - 'To help parents create nurturing environments for their children, we support programs that teach parents about developmental psychology, cultural child rearing differences, pedagogy, issues of health, prenatal care and diet, as well as programs which provide both cognitive and emotional support to parents.'
+      - 'To help parents <b>create nurturing environments for their children</b>, we support programs that teach parents about developmental psychology, cultural child rearing differences, pedagogy, issues of health, prenatal care and diet, as well as programs which provide both cognitive and emotional support to parents.'
+  - title: 'Early Childhood Welfare'
+    image:
+      file: 'child-welfare.jpg'
+      rotationClass: 'md:-rotate-[3deg]'
+      borderColorClass: 'border-blue-500'
+    titleClass: 'text-white'
+    paragraphs:
+      - 'Children can only reach their full potential when all aspects of their intellectual, emotional and physical development are optimally supported.'
+      - 'Providing a safe and nurturing environment is essential as is imparting the skills of social living in a culturally diverse world. Therefore, the Foundation supports projects that seek to <b>perfect child rearing practices and to identify models</b> that can provide creative, caring environments in which all young children thrive.'
+  - title: 'Early Childhood Education and Play'
+    image:
+      file: 'education-and-play.jpg'
+      rotationClass: 'md:rotate-[3deg]'
+      borderColorClass: 'border-yellow-400'
+    translationClass: '2xl:-translate-y-[5%]'
+    titleClass: 'text-white'
+    paragraphs:
+      - 'Research shows that children need to be stimulated as well as nurtured, early in life, if they are to succeed in school, work and life. That preparation relates to every aspect of a child’s development, from birth to age seven, and everywhere a child learns – at home, in childcare settings and in preschool.'
+      - 'We seek to <b>improve the quality of both early childhood teaching and learning</b>, through the development of innovative curricula and research based pedagogical standards, as well as the design of imaginative play materials and learning environments.'
 inclusions:
   - The organization’s official name, website address and contact information
   - A brief (250 word maximum) summary of the organization’s mission and recent program history
