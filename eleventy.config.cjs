@@ -111,6 +111,10 @@ module.exports = function (eleventyConfig) {
     return this.ctx[value];
   });
 
+  eleventyConfig.addNunjucksFilter('merge', function (obj1, obj2) {
+    return { ...obj1, ...obj2 };
+  });
+
   // Add Custom Data Extensions YAML
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 

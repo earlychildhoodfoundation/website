@@ -1,4 +1,8 @@
-const { currentYear, formattedDeadline } = require('./dates');
+const {
+  currentYear,
+  formattedDeadline,
+  abbreviatedFormattedDeadline,
+} = require('./dates');
 module.exports = {
   name: 'Caplan Foundation for Early Childhood',
   url: 'https://earlychildhoodfoundation.org',
@@ -18,4 +22,5 @@ module.exports = {
   navigation: [{ label: '', url: '' }],
   footerNavigation: [{ label: '', url: '' }],
   nextDeadline: formattedDeadline,
+  nextAbbreviatedDeadline: abbreviatedFormattedDeadline,
 };

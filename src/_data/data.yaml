@@ -3,7 +3,7 @@ guidelines:
     image:
       file: 'parenting-education.jpg'
       rotationClass: 'md:-rotate-[2deg]'
-      borderColorClass: 'border-red-500'
+      borderColorClass: 'border-red-500 dark:border-red-400'
     translationClass: '2xl:translate-y-[5%]'
     titleClass: 'text-white'
     paragraphs:
@@ -12,20 +12,20 @@ guidelines:
     image:
       file: 'child-welfare.jpg'
       rotationClass: 'md:-rotate-[3deg]'
-      borderColorClass: 'border-blue-500'
+      borderColorClass: 'border-blue-500 dark:border-blue-400'
     titleClass: 'text-white'
     paragraphs:
-      - 'Children can only reach their full potential when all aspects of their intellectual, emotional and physical development are optimally supported.'
+      # - 'Children can only reach their full potential when all aspects of their intellectual, emotional and physical development are optimally supported.'
       - 'Providing a safe and nurturing environment is essential as is imparting the skills of social living in a culturally diverse world. Therefore, the Foundation supports projects that seek to <b>perfect child rearing practices and to identify models</b> that can provide creative, caring environments in which all young children thrive.'
   - title: 'Early Childhood Education and Play'
     image:
       file: 'education-and-play.jpg'
       rotationClass: 'md:rotate-[3deg]'
-      borderColorClass: 'border-yellow-400'
+      borderColorClass: 'border-yellow-400 dark:border-yellow-300'
     translationClass: '2xl:-translate-y-[5%]'
     titleClass: 'text-white'
     paragraphs:
-      - 'Research shows that children need to be stimulated as well as nurtured, early in life, if they are to succeed in school, work and life. That preparation relates to every aspect of a child’s development, from birth to age seven, and everywhere a child learns – at home, in childcare settings and in preschool.'
+      # - 'Research shows that children need to be stimulated as well as nurtured, early in life, if they are to succeed in school, work and life. That preparation relates to every aspect of a child’s development, from birth to age seven, and everywhere a child learns – at home, in childcare settings and in preschool.'
       - 'We seek to <b>improve the quality of both early childhood teaching and learning</b>, through the development of innovative curricula and research based pedagogical standards, as well as the design of imaginative play materials and learning environments.'
 inclusions:
   - The organization’s official name, website address and contact information

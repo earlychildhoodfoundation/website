@@ -1,0 +1,73 @@
+{%- set options = {
+  text: 'Upcoming LOI deadline • ',
+  spacing: 1.2,
+  size: 1.15,
+  date: site.nextAbbreviatedDeadline
+} %}
+
+{%- set options = options | merge({doubledText: options.text ~ options.text}) %}
+{% css %}
+
+#ring-wrapper {
+  --char-count: {{ options.doubledText.length }};
+  --font-size: {{ options.size }};
+	--inner-angle: calc((360 / var(--char-count)) * 1deg);
+	--character-width: {{ options.spacing}};
+  --radius: calc(var(--character-width, 1) / sin(var(--inner-angle)) * -1ch);
+  --radius-offset-margin: calc(var(--radius) * -1.5);
+
+	font-family: monospace;
+	text-transform: uppercase;
+	font-size: calc(var(--font-size, 1) * 1rem);
+	position: relative;
+  margin-top: var(--radius-offset-margin);
+}
+
+#ring .char {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:
+		translate(-50%, -50%)
+		rotate(calc(var(--inner-angle) * var(--char-index)))
+		translateY(var(--radius));
+}
+
+#ring-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(var(--radius) * -2);
+  text-align: center;
+  {# font-size: 0.8em; #}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #ring {
+  	animation: spin 120s infinite linear;
+  }
+
+  @keyframes spin {
+    to {
+      rotate: -360deg;
+    }
+  }
+}
+{% endcss %}
+
+<div id="ring-wrapper">
+  <div id="ring">
+    <span aria-hidden>
+      {%- for char in options.doubledText %}
+        <span class="char" style="--char-index:{{loop.index}}">{{ char }}</span>
+      {%- endfor %}
+    </span>
+    <span class="sr-only">{{ options.text }}</span>
+  </div>
+  <div class="rotate-6">
+    <span id="ring-date" class="text-highlight px-4 font-semibold">{{ options.date }}</span>
+  </div>
+
+</div>

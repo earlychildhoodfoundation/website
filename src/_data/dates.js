@@ -24,6 +24,21 @@ const months = [
   'December',
 ];
 
+const abbreviatedMonths = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 let currentDate = new Date();
 currentDate.setHours(0, 0, 0, 0); // get rid of time data
 
@@ -37,4 +52,10 @@ if (!nextDeadline) {
 
 const formattedDeadline = `${months[nextDeadline.getMonth()]} ${nextDeadline.getDate()}, ${nextDeadline.getFullYear()}`;
 
-module.exports = { currentYear, formattedDeadline };
+const abbreviatedFormattedDeadline = `${abbreviatedMonths[nextDeadline.getMonth()]} ${nextDeadline.getDate()}, ${nextDeadline.getFullYear()}`;
+
+module.exports = {
+  currentYear,
+  formattedDeadline,
+  abbreviatedFormattedDeadline,
+};
