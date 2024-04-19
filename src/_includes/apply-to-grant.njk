@@ -1,41 +1,43 @@
-<section class="px-6 text-2xl" tabindex="-1">
-  <h2 id="apply-for-a-grant" class="font-display text-red-600 text-3xl">Apply for a Grant</h2>
-  <p>
+<section class="diagonal-box before:bg-stone-100" tabindex="-1" style="--skew-amount: -3">
+  <div class="content">
+    <div class="px-6 text-2xl max-w-screen-xl mx-auto pt-16">
+      <h2 id="apply-for-a-grant" class="font-display text-red-600 text-3xl">Apply for a Grant</h2>
+      <p>
   The Foundation employs a two-step grant application process that includes the
   submission of both a Letter of Inquiry (LOI) and a Full Proposal–the latter
   only by those applicants requested to do so. This ensures that consideration
   of Full Proposals is limited to those applications that strictly comply with
   the Foundation’s programmatic guidelines.
 </p>
-  <p>The next deadline for submitting a LOI is <b>{{ site.nextDeadline }}</b>.</p>
-  <p>
+      <p>The next deadline for submitting a LOI is <b>{{ site.nextDeadline }}</b>.</p>
+      <p>
   Applicants must submit Letters of Inquiry by clicking on the
   <i>Email your Letter of Inquiry</i> button below. Once a Letter of Inquiry is
   received by the Foundation, the Directors will determine if the proposed
   program fits the Foundation’s funding guidelines. Successful applicants will
   be invited via email to submit Full Proposals.
 </p>
-  <p>
-    <strong
+      <p>
+        <strong
     >Each Letter of Inquiry should include:</strong
   >
-  </p>
-  <ol class="list-count columns-2 text-sky-900 bg-sky-50 p-4 rounded-2xl">
-    {%- for inclusion in data.inclusions %}
-      <li>
-        <span class="list-count-counter font-display" aria-hidden="true"></span>
-        <span class="list-count-label"
+      </p>
+      <ol class="list-count columns-2 text-sky-900 bg-sky-50 p-4 rounded-2xl">
+        {%- for inclusion in data.inclusions %}
+          <li>
+            <span class="list-count-counter font-display" aria-hidden="true"></span>
+            <span class="list-count-label"
       >{{ inclusion }}</span
     >
-      </li>
-    {%- endfor %}
+          </li>
+        {%- endfor %}
 
-  </ol>
+      </ol>
 
-  <p>
-    <mark> Your Letter of Inquiry must follow the number format listed above.</mark> Failure to follow the specified format will disqualify your LOI from review by the Board of Directors. Please note LOI and the name of your organization in the subject line of your email.
+      <p>
+        <mark> Your Letter of Inquiry must follow the number format listed above.</mark> Failure to follow the specified format will disqualify your LOI from review by the Board of Directors. Please note LOI and the name of your organization in the subject line of your email.
 </p>
-  <p>
+      <p>
   There are many proposals that we do not consider because they do not meet the
   criteria stated in our website. We strive to fund ideas that are adventurous,
   thoughtful and challenge the status quo. They should have a fresh concept (not
@@ -44,25 +46,28 @@
   academic, social and cultural studies and practices.
 </p>
 
-  <p>
+      <p>
   All written correspondence to the Caplan Foundation for Early Childhood should
   be directed to
   <strong>
-      {{ site.contact.name }} at {{ site.contact.address }}, {{ site.contact.city
+          {{ site.contact.name }} at {{ site.contact.address }}, {{ site.contact.city
     }}
-      {{ site.contact.state }}, {{ site.contact.zip }}</strong
+          {{ site.contact.state }}, {{ site.contact.zip }}</strong
   >
-  </p>
-  <p>
-    <a
+      </p>
+      <p>
+        <a
     href="mailto:info@earlychildhoodfoundation.org?subject=Letter%20of%20Inquiry"
     >Email your Letter of Inquiry</a
   >
-  </p>
-  <p>
+      </p>
+      <p>
   This will open your default email client. If you are using a different client,
   please send the email to
-  <a href="mailto:{{site.contact.email}}">{{site.contact.email}}</a>, and use
+  <a href="mailto:{{site.contact.email}}?subject=">{{site.contact.email}}</a>, and use
   "Letter of Inquiry" as your subject line.
 </p>
+    </div>
+  </div>
+
 </section>
