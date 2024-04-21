@@ -23,6 +23,9 @@
     --brand-hero-bg-color: #fa4242;
     --rgb-yellow: 255, 226, 0;
     --rgb-purple: 88, 86, 214;
+    --brand-yellow: hsl(47, 88%, 62%);
+    --brand-red: hsl(2, 68%, 58%);
+    --brand-blue: hsl(221, 82%, 62%);
 
     --navbar-link-color: hsl(0, 0%, 0%);
     --grid-gutter-width: 50px;
@@ -189,8 +192,11 @@
 
   .list-count > li {
     align-items: center;
+    break-inside: avoid-column; /* IE and Edge */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
     display: flex;
     padding-block: 0.75em;
+    page-break-inside: avoid; /* Firefox */
   }
 
   .list-count-counter::before {
@@ -200,12 +206,49 @@
     color: theme('colors.zinc.800');
     content: counter(counter);
     counter-increment: counter;
-    display: inline-block;
+    display: grid;
     font-family: var(--title-font);
     height: 3em;
-    line-height: 3em;
-    text-align: center;
+    place-content: center;
     width: 3em;
+  }
+
+  .list-count > li:nth-child(3n + 1) > .list-count-counter::before {
+    background-color: theme('colors.red.100');
+    border: 1px solid theme('colors.red.300');
+    color: theme('colors.red.900');
+  }
+
+  .list-count > li:nth-child(3n + 2) > .list-count-counter::before {
+    background-color: theme('colors.blue.100');
+    border: 1px solid theme('colors.blue.300');
+    color: theme('colors.blue.900');
+  }
+
+  .list-count > li:nth-child(3n + 3) > .list-count-counter::before {
+    background-color: theme('colors.yellow.100');
+    border: 1px solid theme('colors.yellow.300');
+    color: theme('colors.yellow.900');
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .list-count > li:nth-child(3n + 1) > .list-count-counter::before {
+      background-color: theme('colors.red.900');
+      border: 0;
+      color: theme('colors.red.100');
+    }
+
+    .list-count > li:nth-child(3n + 2) > .list-count-counter::before {
+      background-color: theme('colors.blue.900');
+      border: 0;
+      color: theme('colors.blue.100');
+    }
+
+    .list-count > li:nth-child(3n + 3) > .list-count-counter::before {
+      background-color: theme('colors.yellow.900');
+      border: 0;
+      color: theme('colors.yellow.100');
+    }
   }
 
   .list-count-label {
