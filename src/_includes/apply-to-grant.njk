@@ -1,73 +1,97 @@
-<section class="diagonal-box before:bg-stone-100" tabindex="-1" style="--skew-amount: -3">
-  <div class="content">
-    <div class="px-6 text-2xl max-w-screen-xl mx-auto pt-16">
-      <h2 id="apply-for-a-grant" class="font-display text-red-600 text-3xl">Apply for a Grant</h2>
-      <p>
-  The Foundation employs a two-step grant application process that includes the
-  submission of both a Letter of Inquiry (LOI) and a Full Proposal–the latter
-  only by those applicants requested to do so. This ensures that consideration
-  of Full Proposals is limited to those applications that strictly comply with
-  the Foundation’s programmatic guidelines.
-</p>
-      <p>The next deadline for submitting a LOI is <b>{{ site.nextDeadline }}</b>.</p>
-      <p>
-  Applicants must submit Letters of Inquiry by clicking on the
-  <i>Email your Letter of Inquiry</i> button below. Once a Letter of Inquiry is
-  received by the Foundation, the Directors will determine if the proposed
-  program fits the Foundation’s funding guidelines. Successful applicants will
-  be invited via email to submit Full Proposals.
-</p>
-      <p>
-        <strong
-    >Each Letter of Inquiry should include:</strong
+<section class="" style="--skew-amount: -3" tabindex="-1">
+  <div
+    class="diagonal-box before:bg-gradient-to-b before:from-slate-200 before:via-slate-50 before:to-slate-50 before:dark:from-slate-700 before:dark:via-slate-700 before:dark:to-sky-900"
   >
-      </p>
-      <ol class="list-count columns-2 text-sky-900 bg-sky-50 p-4 rounded-2xl">
-        {%- for inclusion in data.inclusions %}
-          <li>
-            <span class="list-count-counter font-display" aria-hidden="true"></span>
-            <span class="list-count-label"
-      >{{ inclusion }}</span
-    >
-          </li>
-        {%- endfor %}
+    <div class="content">
+      <div class="mx-auto max-w-screen-xl px-6 pt-16 text-2xl">
+        <h2
+          id="apply-for-a-grant"
+          class="font-display text-4xl text-red-600 dark:text-red-400"
+        >
+          Apply for a Grant
+        </h2>
+        <p>
+          The Foundation employs a two-step grant application process that
+          includes the submission of both a Letter of Inquiry (LOI) and a Full
+          Proposal–the latter only by those applicants requested to do so. This
+          ensures that consideration of Full Proposals is limited to those
+          applications that strictly comply with the Foundation’s programmatic
+          guidelines.
+        </p>
+        <p>
+          The next deadline for submitting a LOI is
+          <b>{{ site.nextDeadline }}</b>.
+        </p>
+        <p>
+          Applicants must submit Letters of Inquiry by clicking on the
+          <i>Email your Letter of Inquiry</i> button below. Once a Letter of
+          Inquiry is received by the Foundation, the Directors will determine if
+          the proposed program fits the Foundation’s funding guidelines.
+          Successful applicants will be invited via email to submit Full
+          Proposals.
+        </p>
+        <p>
+          <strong>Each Letter of Inquiry should include:</strong>
+        </p>
+        <ol
+          class="list-count my-6 rounded-2xl bg-white p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300"
+        >
+          {%- for inclusion in data.inclusions %}
+            <li>
+              <span
+              class="list-count-counter font-display"
+              aria-hidden="true"
+            ></span>
+              <span class="list-count-label">{{ inclusion }}</span>
+            </li>
+          {%- endfor %}
+        </ol>
 
-      </ol>
+        <p>
+          <mark>
+            Your Letter of Inquiry must follow the number format listed
+            above.</mark
+          >
+          Failure to follow the specified format will disqualify your LOI from
+          review by the Board of Directors. Please note LOI and the name of your
+          organization in the subject line of your email.
+        </p>
+        <p>
+          There are many proposals that we do not consider because they do not
+          meet the criteria stated in our website. We strive to fund ideas that
+          are adventurous, thoughtful and challenge the status quo. They should
+          have a fresh concept (not rehash an older idea) and a defined method
+          of implementation that promotes new approaches and understanding of
+          early childhood and pushes the boundaries of academic, social and
+          cultural studies and practices.
+        </p>
 
-      <p>
-        <mark> Your Letter of Inquiry must follow the number format listed above.</mark> Failure to follow the specified format will disqualify your LOI from review by the Board of Directors. Please note LOI and the name of your organization in the subject line of your email.
-</p>
-      <p>
-  There are many proposals that we do not consider because they do not meet the
-  criteria stated in our website. We strive to fund ideas that are adventurous,
-  thoughtful and challenge the status quo. They should have a fresh concept (not
-  rehash an older idea) and a defined method of implementation that promotes new
-  approaches and understanding of early childhood and pushes the boundaries of
-  academic, social and cultural studies and practices.
-</p>
-
-      <p>
-  All written correspondence to the Caplan Foundation for Early Childhood should
-  be directed to
-  <strong>
-          {{ site.contact.name }} at {{ site.contact.address }}, {{ site.contact.city
-    }}
-          {{ site.contact.state }}, {{ site.contact.zip }}</strong
-  >
-      </p>
-      <p>
-        <a
-    href="mailto:info@earlychildhoodfoundation.org?subject=Letter%20of%20Inquiry"
-    >Email your Letter of Inquiry</a
-  >
-      </p>
-      <p>
-  This will open your default email client. If you are using a different client,
-  please send the email to
-  <a href="mailto:{{site.contact.email}}?subject=">{{site.contact.email}}</a>, and use
-  "Letter of Inquiry" as your subject line.
-</p>
+        <p>
+          All written correspondence to the Caplan Foundation for Early
+          Childhood should be directed to
+          <strong>
+            {{ site.contact.name }}, {{ site.contact.address }}, {{
+            site.contact.city }}
+            {{ site.contact.state }}, {{ site.contact.zip
+            }}</strong
+          >
+        </p>
+        <div class="mb-8 mt-24 text-center">
+          <a
+            href="mailto:info@earlychildhoodfoundation.org?subject=Letter%20of%20Inquiry"
+            class="mb-2 me-2 rounded-full px-4 py-2 lg:px-8 lg:py-4 text-center font-display text-2xl lg:text-4xl hover:text-blue-800 text-blue-700 focus:outline-none focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-800 border-8 
+            hover:bg-yellow-300 bg-yellow-200 hover:border-yellow-500 border-yellow-400 transition duration-200"
+            >Email your Letter of Inquiry →</a
+          >
+          <p class="text-slate-500 mt-10">
+            This will open your default email client. If you are using a
+            different client, please send the email to
+            <a href="mailto:{{site.contact.email}}?subject=Letter%20of%20Inquiry" class="hover:underline"
+              >{{site.contact.email}}</a
+            >, and use "Letter of Inquiry" as your subject line.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-
 </section>
