@@ -1,15 +1,13 @@
-<section class="text-2xl px-6" tabindex="-1">
-  <div class="content">
-    <h2 id="grant-recipients" class="font-display text-red-600 text-3xl">Grant Recipients</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-[2px] rounded-2xl overflow-clip">
-      {%- for grant in grants | sort(false, false, 'year' | reverse) %}
-        <div class="smol-card-component bg-blue-800 text-white">
-          <div class="text-lg px-4 text-blue-200">{{ grant.organization }}</div>
-          <div class="text-lg px-4 text-blue-200">{{ grant.year }}</div>
-          <div class="text-2xl px-4 py-4 font-semibold">{{ grant.project }}</div>
-          <div class="font-display text-3xl mt-auto px-4 pt-2">${{ grant.amount | commaNumber }}</div>
-        </div>
-      {%- endfor %}
-    </div>
+<section class="text-2xl px-6 max-w-screen-2xl pt-12 mx-auto" tabindex="-1">
+  <div class="">
+    <h2 id="grant-recipients" class="font-display text-red-600 dark:text-red-400 text-4xl">Grant Recipients</h2>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {%- for grant in grants | sort(false, false, 'year') | reverse | limit(8) %}
+      <div class="border-t border-slate-400 xl:pr-16">
+        <div class="text-3xl pt-4 font-semibold text-slate-800 text-balance">{{ grant.project| formatTitle }}</div>
+        <div class="text-2xl pb-8 text-slate-600">{{ grant.organization }} — {{ grant.year }} · ${{ grant.amount | commaNumber }}</div>
+      </div>
+    {%- endfor %}
   </div>
 </section>

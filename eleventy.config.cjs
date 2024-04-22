@@ -2,6 +2,15 @@ const markdownIt = require('markdown-it');
 const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
 const prettier = require('./src/transforms/prettier.js');
 const yaml = require('js-yaml');
+let formatTitle;
+
+import('@directus/format-title')
+  .then((module) => {
+    formatTitle = module.default;
+  })
+  .catch((err) => {
+    console.error('Failed to load module', err);
+  });
 
 module.exports = function (eleventyConfig) {
   const mdOptions = {
@@ -107,12 +116,20 @@ module.exports = function (eleventyConfig) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   });
 
+  eleventyConfig.addFilter('formatTitle', function (value) {
+    return formatTitle(value);
+  });
+
   eleventyConfig.addNunjucksFilter('getData', function (value) {
     return this.ctx[value];
   });
 
   eleventyConfig.addNunjucksFilter('merge', function (obj1, obj2) {
     return { ...obj1, ...obj2 };
+  });
+
+  eleventyConfig.addNunjucksFilter('limit', function (arr, limit) {
+    return arr.slice(0, limit);
   });
 
   // Add Custom Data Extensions YAML
