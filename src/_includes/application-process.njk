@@ -1,9 +1,9 @@
 <section tabindex="-1">
   <div
-    class="diagonal-box before:bg-gradient-to-b before:from-slate-200 before:via-slate-50 before:to-slate-50 before:dark:from-slate-700 before:dark:via-slate-700 before:dark:to-sky-900"
+    class="diagonal-box before:bg-gradient-to-b before:from-slate-200 before:via-slate-50 before:to-slate-50 before:dark:from-slate-700 before:dark:via-slate-700 before:dark:to-sky-900 before:[--skew-amount:-3]"
   >
     <div class="content">
-      <div class="mx-auto max-w-screen-xl px-6 pt-16 text-2xl">
+      <div class="mx-auto max-w-screen-2xl px-6 pt-16 text-2xl">
         <h2
           id="application-process"
           class="font-display text-4xl text-red-600 dark:text-red-400"
@@ -34,12 +34,12 @@
           <strong>Each Letter of Inquiry should include:</strong>
         </p>
         <ol
-          class="list-count my-6 rounded-2xl bg-white p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300"
+          class="list-count my-6 rounded-2xl bg-white p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300 md:text-2xl  md:font-medium "
         >
           {%- for inclusion in data.inclusions %}
             <li>
               <span
-              class="list-count-counter font-display"
+              class="list-count-counter"
               aria-hidden="true"
             ></span>
               <span class="list-count-label">{{ inclusion }}</span>
@@ -79,11 +79,11 @@
         <div class="mb-8 mt-24 text-center">
           <a
             href="mailto:info@earlychildhoodfoundation.org?subject=Letter%20of%20Inquiry"
-            class="mb-2 me-2 rounded-full px-4 py-2 lg:px-8 lg:py-4 text-center font-display text-2xl lg:text-4xl hover:text-blue-800 text-blue-700 focus:outline-none focus:ring-4 focus:ring-purple-400 dark:focus:ring-purple-800 border-8 
+            class="mb-2 me-2 rounded-full px-4 py-2 lg:px-8 lg:py-4 text-center text-2xl lg:text-3xl lg:font-semibold hover:text-blue-800 text-blue-700 focus:outline-none focus:ring-4 focus:ring-purple-400 dark:focus:ring-purple-800 border-8 
             hover:bg-yellow-300 bg-yellow-200 hover:border-yellow-500 border-yellow-400 transition duration-200"
             >Email your Letter of Inquiry →</a
           >
-          <p class="text-slate-500 mt-10">
+          <p class="text-slate-500 mt-10 max-w-prose mx-auto">
             This will open your default email client. If you are using a
             different client, please send the email to
             <a href="mailto:{{site.contact.email}}?subject=Letter%20of%20Inquiry" class="hover:underline"
