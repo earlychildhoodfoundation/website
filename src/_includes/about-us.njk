@@ -1,24 +1,24 @@
-<section>
-  <h2 class="h2" id="about">About Us</h2>
-
-  <h3 class="h3">History</h3>
-
-  <img
-    src="{{ site.imgDir }}Frank-Theresa-Caplan.jpg"
+<section tabindex="-1" class="mx-auto max-w-screen-xl px-6 pt-16 pb-24 text-2xl text-slate-800 leading-normal">
+  <h2 class="font-display text-4xl text-red-600 dark:text-red-400" id="about-us">About Us</h2>
+  {# <img
+    src="{{ site.imgDir }}frank-and-theresa-caplan--blobs.svg"
+    class="about-img lg:float-right max-lg:mx-auto max-lg:mb-10"
     alt=""
-    class="img-framed hard-top rotate-1 rounded"
-  />
-
-  <p>
-    Frank and Theresa Caplan were pioneers in the development of creative,
-    imaginative, educational toys for young children. In the early thirties,
+    width="903"
+    height="1216"
+/> #}
+  <div class="about-img lg:float-right max-lg:mx-auto max-lg:mb-10">
+    {%- include "partials/frank-and-theresa-caplan--blobs.svg" %}
+  </div>
+  <div class="max-w-prose">
+    <p class="first-letter:[initial-letter:4] first-letter:[-webkit-initial-letter:4] first-line:text-red-500 first-line:uppercase first-line:tracking-wide first-letter:me-3 font-bold ">Frank and Theresa Caplan were pioneers in the development of creative, imaginative, educational toys for young children. In the early thirties,
     Frank Caplan was a youth worker and one of the first male nursery school
     teachers in the United States. In 1949, he co-founded Creative Playthings, a
     company that designed and manufactured toys to enhance the imagination and
     learning of young children.
   </p>
 
-  <p>
+    <p>
     By the 1950’s, Creative Playthings was one of the most important
     manufacturers and suppliers of early childhood educational toys and
     equipment. They collaborated with internationally known artists, such as
@@ -27,7 +27,7 @@
     sculptures.
   </p>
 
-  <p>
+    <p>
     Creative Playthings researched and developed innovative curriculum materials
     for schools and furniture that could be stacked and rearranged to allow for
     flexibility within the classroom. They introduced dolls, which were racially
@@ -35,7 +35,7 @@
     at the time.
   </p>
 
-  <p>
+    <p>
     In 1975, Frank Caplan and his wife, Theresa, created The Princeton Center
     for Infancy and Early Childhood, a pioneering research and publishing
     organization focusing on materials for parent education. He researched and
@@ -47,21 +47,22 @@
     1973.
   </p>
 
-  <p>
+    <p>
     Throughout their lives, Frank and Theresa worked to develop innovative and
     beautifully designed educational toys and equipment for home and school
     environment. They wanted to encourage parents’ understanding and knowledge
     about the extraordinary time of infancy and early childhood.
   </p>
 
-  <p>
+    <p>
     The Caplan Foundation for Early Childhood was created in 2014 as a result of
     a bequest from Theresa Caplan stipulating her estate be used to incubate
     innovation and research addressing the needs of children from birth through
     age seven.
   </p>
+  </div>
 
-  <h3 class="h3">Financial Information</h3>
+  {# <h3 class="h3">Financial Information</h3>
   <ul>
     <li>
       <a href="./files/2015-990-Caplan-Foundation.pdf">
@@ -73,5 +74,5 @@
         2014 IRS Form 990 (PDF)
       </a>
     </li>
-  </ul>
+  </ul> #}
 </section>

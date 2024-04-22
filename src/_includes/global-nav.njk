@@ -1,6 +1,6 @@
 <nav class="sticky top-0 bg-white z-10">
-  <ul class="list-none flex max-md:hidden  justify-around font-sans py-4 text-xl font-medium dark:font-semibold border-b border-gray-300 dark:border-gray-950 dark:bg-slate-900">
-    <li class="-my-3">
+  <ul class="list-none flex max-md:hidden  justify-around font-sans text-xl font-medium dark:font-semibold border-b border-gray-300 dark:border-gray-950 dark:bg-slate-900">
+    <li class="py-1">
       <a href="#home">
         <img
           class="flex-shrink-0 rounded-full bg-red-600 border border-slate-200"
@@ -11,20 +11,10 @@
 />
       </a>
     </li>
-    <li>
-      <a href="#program-guidelines">Program Guidelines</a>
-    </li>
-    <li>
-      <a href="#limitations">Funding Limitations</a>
-    </li>
-    <li>
-      <a href="#apply-for-a-grant">Apply for a Grant</a>
-    </li>
-    <li>
-      <a href="#grants-awarded">Awarded Grants</a>
-    </li>
-    <li>
-      <a href="#about">About Us</a>
-    </li>
+    {%- for navItem in site.navigation %}
+      <li>
+        <a href="{{ navItem.url }}" class="hover:text-red-600 active:text-red-500 border-b-4 border-transparent hover:border-red-400 py-4 inline-block">{{ navItem.label }}</a>
+      </li>
+    {%- endfor %}
   </ul>
 </nav>
