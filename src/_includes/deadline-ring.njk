@@ -1,15 +1,15 @@
 {%- set options = {
-  text: 'Upcoming LOI deadline • ',
+  string: 'Upcoming LOI deadline • ',
   spacing: 1.2,
   size: 1.15,
   date: site.nextAbbreviatedDeadline
 } %}
 
-{%- set options = options | merge({doubledText: options.text ~ options.text}) %}
+{%- set options = options | merge({doubledString: options.string ~ options.string}) %}
 {% css %}
 
 #ring-wrapper {
-  --char-count: {{ options.doubledText.length }};
+  --char-count: {{ options.doubledString.length }};
   --font-size: {{ options.size }};
 	--inner-angle: calc((360 / var(--char-count)) * 1deg);
 	--character-width: {{ options.spacing }};
@@ -60,11 +60,11 @@
 <div id="ring-wrapper">
   <div id="ring">
     <span aria-hidden>
-      {%- for char in options.doubledText %}
+      {%- for char in options.doubledString %}
         <span class="char" style="--char-index:{{loop.index}}">{{ char }}</span>
       {%- endfor %}
     </span>
-    <span class="sr-only">{{ options.text }}</span>
+    <span class="sr-only">{{ options.string }}</span>
   </div>
   <div class="rotate-6">
     <span id="ring-date" class="text-highlight px-4 font-semibold">{{ options.date }}</span>

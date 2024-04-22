@@ -210,28 +210,34 @@
     content: counter(counter);
     counter-increment: counter;
     display: grid;
-    font-family: var(--title-font);
+    /* font-family: var(--title-font); */
     height: 3em;
     place-content: center;
     width: 3em;
   }
 
   .list-count > li:nth-child(3n + 1) > .list-count-counter::before {
-    background-color: theme('colors.red.100');
+    /* background-color: theme('colors.red.100');
     border: 1px solid theme('colors.red.300');
-    color: theme('colors.red.900');
+    color: theme('colors.red.900'); */
+    background-color: theme('colors.red.400');
+    border: 3px solid theme('colors.red.300');
+    color: theme('colors.red.950');
   }
 
   .list-count > li:nth-child(3n + 2) > .list-count-counter::before {
-    background-color: theme('colors.blue.100');
+    /* background-color: theme('colors.blue.100');
     border: 1px solid theme('colors.blue.300');
-    color: theme('colors.blue.900');
+    color: theme('colors.blue.900'); */
+    background-color: theme('colors.blue.400');
+    border: 3px solid theme('colors.blue.300');
+    color: theme('colors.blue.950');
   }
 
   .list-count > li:nth-child(3n + 3) > .list-count-counter::before {
-    background-color: theme('colors.yellow.100');
-    border: 1px solid theme('colors.yellow.300');
-    color: theme('colors.yellow.900');
+    background-color: theme('colors.yellow.400');
+    border: 3px solid theme('colors.yellow.300');
+    color: theme('colors.yellow.950');
   }
 
   @media (prefers-color-scheme: dark) {
@@ -304,9 +310,9 @@ but as a fallback you can chain `:not()` instead */
     align-self: start;
   }
 
-  .about-img {
+  #caplanBlobs {
     shape-margin: theme('space.12');
-    shape-outside: url('/assets/images/frank-and-theresa-caplan--blobs.svg');
+    shape-outside: url('/assets/images/caplan-blobs-shape-outside.svg');
     width: 650px;
   }
 
