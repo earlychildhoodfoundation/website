@@ -26,7 +26,9 @@
     --brand-yellow: hsl(47, 88%, 62%);
     --brand-red: hsl(2, 68%, 58%);
     --brand-blue: hsl(221, 82%, 62%);
-
+    --blue-blob: url('/assets/images/blue-blob.svg');
+    --yellow-blob: url('/assets/images/yellow-blob.svg');
+    --red-blob: url('/assets/images/red-blob.svg');
     --navbar-link-color: hsl(0, 0%, 0%);
     --grid-gutter-width: 50px;
 
@@ -103,6 +105,7 @@
   }
 
   p {
+    /* max-width: theme('maxWidth.prose'); */
     text-wrap: pretty;
   }
 
@@ -301,6 +304,12 @@ but as a fallback you can chain `:not()` instead */
     align-self: start;
   }
 
+  .about-img {
+    shape-margin: theme('space.12');
+    shape-outside: url('/assets/images/frank-and-theresa-caplan--blobs.svg');
+    width: 650px;
+  }
+
   /* DIAGONAL BOX */
 
   .diagonal-box {
@@ -334,9 +343,6 @@ but as a fallback you can chain `:not()` instead */
   }
 
   .bg-blobs::after {
-    --blue-blob: url('/assets/images/blue-blob.svg');
-    --yellow-blob: url('/assets/images/yellow-blob.svg');
-    --red-blob: url('/assets/images/red-blob.svg');
     background-clip: content-box;
     background-image: var(--red-blob), var(--blue-blob), var(--yellow-blob);
     background-position:
