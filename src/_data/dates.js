@@ -1,9 +1,11 @@
+// determine LOI deadline script
+
+// when updating these dates, the cron job that rebuilds the site also needs to be adjusted to the next day
+// the cron job for the day after the deadline days is: 0 0 1 2,6,10 * *
+
 const currentYear = new Date().getFullYear();
 
-// Determine LOI deadline script
 const deadlines = [
-  // When updating these dates, the cron job that rebuilds the site also needs to be adjusted to the next day
-  // The cron job for the day after these days is: 0 0 1 2,6,10 * *
   new Date(currentYear, 0, 31), // Jan 31
   new Date(currentYear, 4, 31), // May 31
   new Date(currentYear, 8, 30), // Sep 30
@@ -40,11 +42,13 @@ const abbreviatedMonths = [
 ];
 
 let currentDate = new Date();
-currentDate.setHours(0, 0, 0, 0); // get rid of time data
+
+// get rid of time data
+currentDate.setHours(0, 0, 0, 0);
 
 let nextDeadline = deadlines.find((deadline) => deadline > currentDate);
 
-// If no deadline is found, it means we're past the last deadline of the year. So, the next deadline is the first one of the next year.
+// if no deadline is found, it means we're past the last deadline of the year. So, the next deadline is the first one of the next year.
 if (!nextDeadline) {
   nextDeadline = new Date(deadlines[0]);
   nextDeadline.setFullYear(nextDeadline.getFullYear() + 1);
