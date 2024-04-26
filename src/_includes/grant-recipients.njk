@@ -1,13 +1,20 @@
-<section class="text-2xl px-6 max-w-screen-2xl pt-12 mx-auto" tabindex="-1">
-  <div class="">
-    <h2 id="grant-recipients" class="font-display text-red-600 dark:text-red-400 text-4xl">Grant Recipients</h2>
-  </div>
+{%- set heading = 'Grant Recipients' %}
+{%- set end = 8 %}
+{%- import "macros/macros.njk" as macros %}
+
+<section class="mx-auto max-w-screen-2xl px-6 pt-12 text-2xl" tabindex="-1">
+  <h2 id="grant-recipients" class="font-display text-red-600 dark:text-red-400 text-4xl">{{ heading }}</h2>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-    {%- for grant in grants | sort(false, false, 'year') | reverse | limit(8) %}
+    {%- for grant in grants | sort(false, false, 'year') | reverse | limit(start, end) %}
       <div class="border-t border-slate-400 xl:pr-16">
         <div class="text-3xl pt-4 font-semibold text-slate-800 text-balance">{{ grant.project| formatTitle }}</div>
         <div class="text-2xl pb-8 text-slate-600">{{ grant.organization }} — {{ grant.year }} · ${{ grant.amount | commaNumber }}</div>
       </div>
     {%- endfor %}
   </div>
+  <a
+    href="/grants"
+    class="mb-2 me-2 rounded-full border-4 border-blue-400 bg-blue-700 px-4 py-2 text-center text-xl text-white transition duration-200 hover:border-blue-500 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-purple-400 lg:text-2xl lg:font-medium dark:focus:ring-purple-800"
+    >All Grant Recipients by Year →</a
+  >
 </section>

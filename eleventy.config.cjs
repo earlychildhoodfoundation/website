@@ -120,6 +120,25 @@ module.exports = function (eleventyConfig) {
     return formatTitle(value);
   });
 
+  eleventyConfig.addFilter('groupByYear', function (items) {
+    let result = {};
+    items.forEach((item) => {
+      let year = item.year;
+      if (!result[year]) {
+        result[year] = [];
+      }
+      result[year].push(item);
+    });
+    return result;
+  });
+
+  eleventyConfig.addFilter('sortObjectByKeysDesc', function (obj) {
+    return Object.keys(obj)
+      .sort()
+      .reverse()
+      .map((key) => ({ year: key, grants: obj[key] }));
+  });
+
   eleventyConfig.addNunjucksFilter('getData', function (value) {
     return this.ctx[value];
   });
@@ -128,8 +147,8 @@ module.exports = function (eleventyConfig) {
     return { ...obj1, ...obj2 };
   });
 
-  eleventyConfig.addNunjucksFilter('limit', function (arr, limit) {
-    return arr.slice(0, limit);
+  eleventyConfig.addNunjucksFilter('limit', function (arr, start = 0, end) {
+    return arr.slice(start, end);
   });
 
   // Add Custom Data Extensions YAML

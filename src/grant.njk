@@ -1,0 +1,64 @@
+---
+permalink: /grants/index.html
+heading: All Grant Recipients by Year
+pageNavigation:
+  - label: Home
+    url: /
+---
+{% extends './_layouts/default.njk' %}
+{%- import "macros/macros.njk" as macros %}
+{% set grantsByYear = grants | groupByYear | sortObjectByKeysDesc %}
+{%- set start = 0 %}
+{%- set end = grants.length %}
+
+{%- block header %}
+  {# {%- include 'global-header.njk' %} #}
+{%- endblock %}
+{% block global_nav %}
+  <nav class="sticky top-0 bg-white z-10">
+    <ul class="list-none flex max-md:hidden justify-between font-sans text-xl font-medium dark:font-semibold border-b border-gray-300 dark:border-gray-950 dark:bg-slate-900 px-[2vw]">
+      <li class="py-1">
+        <a href="/">
+          <img
+          class="flex-shrink-0 rounded-full bg-red-600 border border-slate-200"
+          src="{{ site.imgDir }}logo-optimized.svg"
+          width="50"
+          height="50"
+          aria-hidden
+/>
+        </a>
+        <span class="sr-only">Home</span>
+      </li>
+    </ul>
+  </nav>
+{% endblock %}
+
+{%- block main %}
+  {# Slicing from {{ start }} to {{ end }} out of a total of {{ grants.length }} grants. #}
+  <section class="mx-auto max-w-screen-2xl px-6 pt-12 pb-24 text-2xl" tabindex="-1">
+    <a
+    href="/"
+    class="mb-2 me-2 rounded-full border-4 border-blue-400 bg-blue-700 px-4 py-2 text-center text-xl text-white transition duration-200 hover:border-blue-500 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-purple-400 lg:text-2xl lg:font-medium dark:focus:ring-purple-800"
+    >
+      <span aria-hidden>← </span>Home</a
+  >
+    <h1 class="text-5xl font-display">{{ heading }}</h1>
+    {% for item in grantsByYear %}
+      {%- if loop.index != 1 %}
+        {%- set borderTop = 'border-t-8 border-slate-900' %}
+      {%- endif %}
+      <h2 id="grants-{{ item.year }}" class="{{ borderTop }} pt-2 font-display text-red-600 dark:text-red-400 text-3xl">{{ item.year }}</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {% for grant in item.grants %}
+          {%- if loop.index != 1 and loop.index != 2  %}
+            {%- set borderClass = 'border-t' %}
+          {%- endif %}
+          <div class="{{ borderClass }} border-slate-400 xl:pr-16">
+            <div class="text-3xl pt-4 font-semibold text-slate-800 text-balance">{{ grant.project| formatTitle }}</div>
+            <div class="text-2xl pb-8 text-slate-600">{{ grant.organization }} — {{ grant.year }} · ${{ grant.amount | commaNumber }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{%- endblock %}
