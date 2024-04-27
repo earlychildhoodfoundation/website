@@ -13,7 +13,7 @@ guidelines:
     image:
       file: 'child-welfare.jpg'
       rotationClass: 'md:-rotate-[3deg]'
-      borderColorClass: 'border-blue-500 dark:border-blue-400'
+      borderColorClass: 'border-blue-500 dark:border-blue-400 rounded-full'
     titleClass: 'text-white'
     paragraphs:
       # - 'Children can only reach their full potential when all aspects of their intellectual, emotional and physical development are optimally supported.'

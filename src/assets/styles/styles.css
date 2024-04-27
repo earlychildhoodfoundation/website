@@ -31,15 +31,6 @@
     --red-blob: url('/assets/images/red-blob.svg');
     --navbar-link-color: hsl(0, 0%, 0%);
     --grid-gutter-width: 50px;
-
-    /* Diagonal variables to calculate padding */
-    /* https://web.archive.org/web/20240128023827/https://9elements.com/blog/create-diagonal-layouts-like-it-s-2020/ */
-    --skew-amount: 3;
-    --skew-angle: calc(var(--skew-amount) * 1deg);
-    --negative-skew-angle: calc(var(--skew-amount) * -1deg);
-    --content-width: 100vw;
-    --magic-number: tan(var(--skew-angle));
-    --skew-padding: calc(var(--content-width) * var(--magic-number) / 2);
   }
 
   @media screen and (min-width: theme('screens.sm')) {
@@ -319,6 +310,14 @@ but as a fallback you can chain `:not()` instead */
   /* DIAGONAL BOX */
 
   .diagonal-box {
+    /* Diagonal variables to calculate padding */
+    /* https://web.archive.org/web/20240128023827/https://9elements.com/blog/create-diagonal-layouts-like-it-s-2020/ */
+    --skew-amount: 3;
+    --skew-angle: calc(var(--skew-amount) * 1deg);
+    --negative-skew-angle: calc(var(--skew-amount) * -1deg);
+    --content-width: 100vw;
+    --magic-number: tan(var(--skew-angle));
+    --skew-padding: calc(var(--content-width) * var(--magic-number) / 2);
     position: relative;
   }
 

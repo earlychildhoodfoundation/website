@@ -17,7 +17,7 @@
     <ul class="mt-2 mb-8 flex flex-col md:flex-row gap-1 md:gap-2 max-2xl:flex-wrap justify-center isolate 2xl:px-24">
       {%- for guideline in data.guidelines %}
         <li class="pt-4 pb-12 lg:rounded-2xl md:flex-grow-0 md:flex-shrink 2xl:flex-grow lg:basis-[490px] xl:basis-[550px] {{ guideline.translationClass }} column-index-{{loop.index}}">
-          <img alt="" src="{{ site.imgDir }}{{ guideline.image.file }}" class=" border-8 border-[12px] rounded-2xl mx-auto {{ guideline.image.rotationClass }} {{ guideline.image.borderColorClass }}  2xl:-translate-y-12 scale-95"/>
+          <img alt="" src="{{ site.imgDir }}{{ guideline.image.file }}" class="border-2 rounded-2xl mx-auto {{ guideline.image.rotationClass }} {{ guideline.image.borderColorClass }}  2xl:-translate-y-12 scale-95"/>
           <div class="relative mt-4 {{guideline.paragraphClass}}">
             <div class="bg-white/90 dark:bg-slate-800/60 px-6 pt-2 pb-6 rounded-xl backdrop-blur-sm">
               <h3 class="mt-4 text-2xl font-semibold leading-relaxed {{ guideline.titleClass }}">
