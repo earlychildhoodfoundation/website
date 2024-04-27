@@ -1,6 +1,6 @@
 ---
 permalink: /grants/index.html
-heading: All Grant Recipients by Year
+heading: Grant Recipients by Year
 pageNavigation:
   - label: Home
     url: /
@@ -35,17 +35,20 @@ pageNavigation:
 {%- block main %}
   {# Slicing from {{ start }} to {{ end }} out of a total of {{ grants.length }} grants. #}
   <section class="mx-auto max-w-screen-2xl px-6 pt-12 pb-24 text-2xl" tabindex="-1">
-    <a
+    <div class="flex mb-36">
+      <a
     href="/"
     class="mb-2 me-2 rounded-full border-4 border-blue-400 bg-blue-700 px-4 py-2 text-center text-xl text-white transition duration-200 hover:border-blue-500 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-purple-400 lg:text-2xl lg:font-medium dark:focus:ring-purple-800"
     >
-      <span aria-hidden>← </span>Home</a
+        <span aria-hidden>← </span>Home</a
   >
-    <h1 class="text-5xl font-display">{{ heading }}</h1>
+      <h1 class="text-5xl font-display my-0 ml-12">{{ heading }}</h1>
+    </div>
+
     {% for item in grantsByYear %}
-      {%- if loop.index != 1 %}
-        {%- set borderTop = 'border-t-8 border-slate-900' %}
-      {%- endif %}
+      {# {%- if loop.index != 1 %} #}
+      {%- set borderTop = 'border-t-8 border-slate-900' %}
+      {# {%- endif %} #}
       <h2 id="grants-{{ item.year }}" class="{{ borderTop }} pt-2 font-display text-red-600 dark:text-red-400 text-3xl">{{ item.year }}</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {% for grant in item.grants %}
