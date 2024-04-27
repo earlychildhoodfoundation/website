@@ -6,7 +6,6 @@ pageNavigation:
     url: /
 ---
 {% extends './_layouts/default.njk' %}
-{%- import "macros/macros.njk" as macros %}
 {% set grantsByYear = grants | groupByYear | sortObjectByKeysDesc %}
 {%- set start = 0 %}
 {%- set end = grants.length %}
