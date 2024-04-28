@@ -1,7 +1,7 @@
 {%- set heading = 'Grant Recipients' %}
 {%- set end = 8 %}
 
-<section class="mx-auto max-w-screen-2xl px-6 pt-12 text-2xl" tabindex="-1">
+<section class="mx-auto max-w-screen-2xl px-6 pt-12 text-2xl" tabindex="-1" aria-labelledby="grant-recipients">
   <h2 id="grant-recipients" class="font-display text-red-600 dark:text-red-400 text-4xl">{{ heading }}</h2>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     {%- for grant in grants | sort(false, false, 'year') | reverse | limit(start, end) %}

@@ -21,7 +21,7 @@ module.exports = {
   currentYear,
   navigation: [
     { label: 'Program Guidelines', url: '#program-guidelines' },
-    { label: 'Funding Limitations', url: '#limitations' },
+    { label: 'Funding Limitations', url: '#funding-limitations' },
     { label: 'Application Process', url: '#application-process' },
     { label: 'Grant Recipients', url: '#grant-recipients' },
     { label: 'About Us', url: '#about-us' },
