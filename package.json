@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prod:build": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --minify && npx @11ty/eleventy --quiet",
+    "prod:build": "npx @11ty/eleventy --quiet && npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --minify",
     "www:serve": "npx @11ty/eleventy --serve --incremental --quiet",
     "debug:serve": "node --inspect node_modules/.bin/eleventy --serve --incremental",
     "css:dev": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --watch"
