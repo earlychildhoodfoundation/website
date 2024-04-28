@@ -398,4 +398,8 @@ but as a fallback you can chain `:not()` instead */
   .font-display {
     -webkit-font-smoothing: antialiased;
   }
+
+  .global-nav-active {
+    @apply border-red-400 text-red-500;
+  }
 }

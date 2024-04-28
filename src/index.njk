@@ -13,8 +13,36 @@ mainClasses: bg-[--bg-default] dark:bg-slate-800
   {%- include "grant-recipients.njk" %}
   {%- include "about-us.njk" %}
 {%- endblock %}
-{%-block scripts %}
-  {# <script>
+{%-block scripts %}{% endblock %}
+
+{% js %}
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('#globalNav a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Remove active class from all nav links
+      navLinks.forEach(link => link.classList.remove('global-nav-active'));
+
+      // Add active class to the nav link corresponding to the current section
+      const id = entry.target.getAttribute('aria-labelledby');
+      const navLink = document.querySelector(`#globalNav a[href="#${id}"]`);
+      if (navLink) {
+        console.log(navLink);
+        navLink.classList.add('global-nav-active');
+        history.pushState(null, null, `#${id}`);
+      }
+    }
+  });
+}, {
+  rootMargin: '-50% 0px -90% 0px',  // Adjust this to control when the active class is added
+});
+
+sections.forEach(section => observer.observe(section));
+{% endjs %}
+
+{# <script>
     (function (b, o, i, l, e, r) {
       undl;
       b.GoogleAnalyticsObject = l;
@@ -32,4 +60,3 @@ mainClasses: bg-[--bg-default] dark:bg-slate-800
     ga('create', 'UA-4524438-13');
     ga('send', 'pageview');
   </script> #}
-{% endblock %}
