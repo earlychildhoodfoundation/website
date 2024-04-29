@@ -9,15 +9,18 @@
     --title-font: Oswald, sans-serif;
     --base-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-    --text-default: light-dark(
+    /* Not supported in Safari yet */
+    /* --text-default: light-dark(
       theme('colors.slate.700'),
       theme('colors.slate.100')
     );
     --bg-default: light-dark(
       theme('colors.slate.100'),
       theme('colors.slate.800')
-    );
+    ); */
 
+    --text-default: theme('colors.slate.700');
+    --bg-default: theme('colors.slate.100');
     --brand-primary: hsl(0, 100%, 61%);
     --brand-secondary: hsl(194, 100%, 33%);
     --brand-hero-bg-color: #fa4242;
@@ -31,6 +34,13 @@
     --red-blob: url('/assets/images/red-blob.svg');
     --navbar-link-color: hsl(0, 0%, 0%);
     --grid-gutter-width: 50px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-default: theme('colors.slate.100');
+      --bg-default: theme('colors.slate.800');
+    }
   }
 
   @media screen and (min-width: theme('screens.sm')) {
@@ -79,6 +89,7 @@
   }
 
   html {
+    background-color: var(--bg-default);
     color: theme('colors.slate.700');
     color: var(--text-default);
     hanging-punctuation: first last;
