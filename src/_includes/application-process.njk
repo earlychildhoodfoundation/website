@@ -1,6 +1,6 @@
 <section tabindex="-1" aria-labelledby="application-process">
   <div
-    class="diagonal-box before:bg-gradient-to-bl text-blue-950 before:bg-slate-50 before:dark:from-slate-700 before:dark:via-slate-700  before:dark:to-sky-900 [--skew-amount:-2]"
+    class="diagonal-box before:bg-gradient-to-bl dark:before:bg-gradient-to-b text-blue-950 dark:text-slate-100 before:bg-slate-50 before:dark:from-slate-700 before:dark:via-slate-700  before:dark:to-slate-700 [--skew-amount:-2]"
   >
     <div class="content">
       <div class="mx-auto max-w-screen-2xl px-6 pt-16 text-2xl">
@@ -34,7 +34,7 @@
           <strong>Each Letter of Inquiry should include:</strong>
         </p>
         <ol
-          class="list-count my-6 rounded-2xl bg-white/70 p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300 md:text-2xl  md:font-medium border border-slate-200"
+          class="list-count my-6 rounded-2xl bg-white/70 p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300 md:text-2xl  md:font-medium border border-slate-200 dark:border-slate-800"
         >
           {%- for inclusion in data.inclusions %}
             <li>
@@ -89,7 +89,7 @@
           </a
           >
         </div>
-        <p class="text-sky-800 max-w-prose mx-auto text-xl pb-16 text-center">
+        <p class="text-sky-800 dark:text-slate-300 max-w-prose mx-auto text-xl pb-16 text-center">
             This will open your default email client. If you are using a
             different client, please send the email to
             <a href="mailto:{{site.contact.email}}?subject=Letter%20of%20Inquiry" class="hover:underline"
