@@ -11,7 +11,7 @@
 <section class="diagonal-box bg-blobs before:bg-gradient-to-b before:lg:bg-gradient-to-br before:from-red-100 before:via-blue-100 before:to-yellow-100  before:dark:from-slate-700 before:dark:via-slate-700  before:dark:to-sky-900 before:border-t before:border-slate-300 dark:before:border-0" tabindex="-1" aria-labelledby="program-guidelines">
   <div class="content max-w-screen-3xl">
     <div class="max-w-screen-xl mx-auto px-4 pb-20">
-      <h2 id="program-guidelines" class="font-display text-red-600 dark:text-red-400 text-4xl">Program Guidelines</h2>
+      <h2 id="program-guidelines" class="font-display text-red-600 dark:text-red-400 text-3xl md:text-4xl">Program Guidelines</h2>
       <p class="text-xl">The Foundation provides funding in the following areas</p>
     </div>
     <ul class="mt-2 mb-8 flex flex-col md:flex-row gap-1 md:gap-2 max-2xl:flex-wrap justify-center isolate 2xl:px-24">
@@ -19,11 +19,11 @@
         <li class="pt-4 pb-12 lg:rounded-2xl md:flex-grow-0 md:flex-shrink 2xl:flex-grow lg:basis-[490px] xl:basis-[550px] {{ guideline.translationClass }} column-index-{{loop.index}}">
           <img alt="{{ guideline.image.alt }}" src="{{ site.imgDir }}{{ guideline.image.file }}" class="border-2 rounded-2xl mx-auto {{ guideline.image.rotationClass }} {{ guideline.image.borderColorClass }}  2xl:-translate-y-12 max-w-[80%]"/>
           <div class="relative mt-4 lg:mt-12 {{guideline.paragraphClass}}">
-            <div class="{{ guideline.cardClass }} {{ guideline.titleClass }} dark:bg-slate-800/60 px-6 pt-2 pb-6 rounded-xl backdrop-blur-sm">
-              <h3 class="mt-4 text-xl lg:text-2xl font-semibold leading-relaxed {{ guideline.titleClass }}">
+            <div class="{{ guideline.cardClass }} {{ guideline.titleClass }} dark:xl:bg-slate-800/60 dark:text-slate-100 dark:border-transparent px-6 pt-2 pb-6 rounded-xl backdrop-blur-sm">
+              <h3 class="mt-4 text-xl md:text-2xl font-semibold leading-relaxed {{ guideline.titleClass }}">
                 <span class="dark:text-slate-300 py-1">{{ guideline.title }}</span></h3>
               {%- for paragraph in guideline.paragraphs %}
-                <p class="mt-4 text-xl lg:text-2xl">{{ paragraph | safe }}</p>
+                <p class="mt-4 text-xl md:text-2xl">{{ paragraph | safe }}</p>
               {%- endfor %}
             </div>
           </div>
