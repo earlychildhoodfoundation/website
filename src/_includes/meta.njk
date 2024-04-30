@@ -1,0 +1,52 @@
+  {%- set pageTitle = title + ' · ' + site.name %}
+
+  {#- We don't want any duplication. This is likely for the homepage #}
+  {%- if site.name === title %} 
+    {%- set pageTitle = title %}
+  {%- endif %}
+
+  {%- set siteTitle = site.name %}
+  {%- set currentUrl = site.url + page.url %}
+
+  {#- If the page’s frontmatter has specific metaTitle and/or metaDesc items, switch 
+    them into the mix #}
+  {%- if metaTitle %}
+    {%- set pageTitle = metaTitle %}
+  {%- endif %}
+
+  {%- if project.heading %}
+    {%- set pageTitle = project.heading %}
+  {%- endif %}
+
+  {%- if not metaDesc %}
+    {%- if subtitle %}
+      {%- set metaDesc = subtitle %}
+    {%- elseif project.lede %}  
+      {%- set metaDesc = project.lede %}
+    {%- else %}
+      {%- set metaDesc = site.tagline %}
+    {%- endif %}
+  {%- endif %}
+
+  <title>{{ pageTitle }}</title>
+  <link rel="canonical" href="{{ currentUrl }}" />
+
+  <meta property="og:site_name" content="{{ siteTitle }}" />
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ currentUrl }}" />
+  <meta name="generator" content="{{ eleventy.generator }}" />
+
+  {%- if socialImg %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="{{ site.url + socialImg }}" />
+  <meta name="twitter:image" content="{{ site.url + socialImg }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+  {%- endif %}
+  
+  {%- if metaDesc %}
+  <meta name="description" content="{{ metaDesc }}" />
+  <meta name="twitter:description" content="{{ metaDesc }}" />
+  <meta property="og:description" content="{{ metaDesc }}" />
+  {%- endif %}

@@ -1,0 +1,53 @@
+<section class="px-6 text-2xl max-w-screen-2xl mx-auto pt-16 pb-16" aria-labelledby="funding-limitations">
+  <h2 id="funding-limitations" class="font-display text-red-600 dark:text-red-400 text-4xl">Funding Limitations</h2>
+  <h3>​The Foundation will <b>not</b> fund:</h3>
+  {# list-image-[url(/assets/images/icon-no-symbol.svg)] list-disc marker:text-orange-500 #}
+  <div class="bg-gradient-to-br from-red-500  to-yellow-500 p-1 rounded-2xl">
+    <ul class="bg-gradient-to-br text-red-700 dark:text-red-200 from-red-500/10  to-yellow-500/10 dark:from-red-950 dark:to-yellow-950 text-xl md:text-2xl md:font-medium md:columns-2 list-limitations leading-snug py-8 bg-white rounded-xl px-2 md:px-4 lg:px-8 2xl:px-12">
+      {%- for limitation in data.limitations %}
+        <li>{{limitation}}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <p class="mt-4 text-center">
+    <strong class="text-highlight">
+      All letters of inquiry that don't comply with the limitations will be
+      rejected.</strong
+    >
+  </p>
+
+  {# <p class="mt-4">
+    Furthermore, the Foundation will only fund grant applications that:</p>
+  <ul class="list-disc marker:text-orange-500">
+    <li>define measurable outcomes</li>
+    <li>include credible methods for documenting and assessing
+    results</li>
+    <li>provide for financial accountability in the application of funds</li>
+    <li>include detailed, prudent implementation budgets</li>
+  </ul> #}
+
+  <div class="lg:grid lg:grid-cols-2 lg:gap-12 text-xl sm:text-2xl">
+    <div class="pt-4 pb-8">
+      <h3 class="text-3xl pt-4 font-semibold">Policy on Funding Indirect Expenses for Grants</h3>
+      <p>
+      The Foundation will not fund arbitrary or excessive allocations of indirect
+      expenses even if a project is worthy. The Foundation’s Board will only
+      approve a maximum of 15% of a project’s direct expenses, when earmarked as
+      general and/or administrative overhead.
+    </p>
+    </div>
+
+    <div class="pt-4 pb-8">
+      <h3 class="text-3xl pt-4 font-semibold">Policy Regarding Multiple Year Funding Requests</h3>
+      <p>
+    Consistent with the Foundation’s mission, as an
+    <b>incubator of innovative research and development</b> directed to
+    improving the general welfare of young children, we will not fund more than
+    the first year of multiple year projects. It is our belief that having  
+    multiple funders, of those worthy projects that demand more sustained
+    efforts, increases the likelihood of their success by ensuring broader
+    oversight and greater long term promotional possibilities.</p>
+    </div>
+  </div>
+
+</section>

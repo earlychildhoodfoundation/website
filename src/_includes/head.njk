@@ -1,0 +1,17 @@
+<!-- META -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+{%- include "meta.njk" %}
+{# {%- include "partials/favicon.njk" %} #}
+
+<!-- Styles -->
+<link rel="preconnect" href="https://rsms.me/">
+
+<link rel="stylesheet" href="/assets/styles/styles.css">
+<link rel="stylesheet" href="{% getBundleFileUrl "css" %}"/>
+
+<!-- Scripts -->
+{%- block scripts %}{%- endblock %}
+<script src="{% getBundleFileUrl "js" %}" defer></script>

@@ -1,0 +1,67 @@
+---
+permalink: /index.html
+---
+
+{% extends './_layouts/default.njk' %}
+
+{%- block main %}
+  {%- include "intro.njk" %}
+  {%- include "program-guidelines.njk" %}
+  {%- include "funding-limitations.njk" %}
+  {%- include "application-process.njk" %}
+  {%- include "grant-recipients.njk" %}
+  {%- include "about-us.njk" %}
+{%- endblock %}
+{%-block scripts %}{% endblock %}
+
+{% js %}
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('#globalNav a');
+
+const observer = new IntersectionObserver((entries) => {
+  sections.forEach((section) => section.classList.remove('is-intersecting'));
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-intersecting');
+
+      navLinks.forEach(link => link.classList.remove('global-nav-active'));
+
+      const id = entry.target.getAttribute('aria-labelledby');
+      const navLink = document.querySelector(`#globalNav a[href="#${id}"]`);
+      if (navLink) {
+        console.log(navLink);
+        navLink.classList.add('global-nav-active');
+        history.pushState(null, null, `#${id}`);
+      }
+    }
+  });
+}, {
+  rootMargin: '-50% 0px -90% 0px',  // Adjust this to control when the active class is added
+});
+
+sections.forEach(section => observer.observe(section));
+{% endjs %}
+
+{% css %}
+.is-intersecting {
+}
+{% endcss %}
+
+{# <script>
+    (function (b, o, i, l, e, r) {
+      undl;
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] = function () {
+        (b[l].q = b[l].q || []).push(arguments);
+      });
+      b[l].l = + new Date();
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = '//www.google-analytics.com/analytics.js';
+      r
+        .parentNode
+        .insertBefore(e, r);
+    })(window, document, 'script', 'ga');
+    ga('create', 'UA-4524438-13');
+    ga('send', 'pageview');
+  </script> #}

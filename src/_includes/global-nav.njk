@@ -1,0 +1,20 @@
+<nav id="globalNav" class="sticky top-0 bg-white z-10 font-sans text-md px-2 lg:text-xl font-medium dark:font-semibold border-b border-gray-300 dark:border-gray-950 dark:bg-slate-900">
+  <ul class="list-none flex max-md:hidden justify-between  px-[2vw] max-w-screen-3xl mx-auto">
+    <li class="py-1">
+      <a href="#intro">
+        <img
+          class="flex-shrink-0 rounded-full bg-red-600 border border-slate-200"
+          src="{{ site.imgDir }}logo-optimized.svg"
+          width="50"
+          height="50"
+          aria-hidden
+/>
+      </a>
+    </li>
+    {%- for navItem in site.navigation %}
+      <li>
+        <a href="{{ navItem.url }}" class="hover:text-red-600 active:text-red-500 border-b-4 border-transparent hover:border-red-400 py-4 inline-block">{{ navItem.label }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

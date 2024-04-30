@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" id="top">
+  <head>
+    {% block head %}
+      {% include 'head.njk' %}
+    {% endblock %}
+  </head>
+  <body {% if bodyClasses %}class="{{ bodyClasses }}"{%- endif -%}>
+    <a href="#main" id="skip-link">Skip to main content <span aria-hidden>↓</span></a>
+    {%- block header %}
+      {%- include 'global-header.njk' %}
+    {%- endblock %}
+    {% block global_nav %}
+      {% include 'global-nav.njk' %}
+    {% endblock %}
+    {# adding tabindex=”-1″ to the target of in-page links, so focus isn’t lost after the link is followed. #}
+    <main id="main" class="{{ mainClasses }}" tabindex="-1">
+      {%- block main %}{%- endblock %}
+    </main>
+    {%- block footer %}
+      {% include 'footer.njk' %}
+    {%- endblock %}
+    <a href="#top" class="to-top-link rounded-full px-6 hidden">Back to top<span aria-hidden>  ↑</span>
+      <span class="sr-only "> of page.</span>
+    </a>
+  </body>
+</html>

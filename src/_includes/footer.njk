@@ -1,0 +1,50 @@
+<footer
+  class="bg-slate-950 px-4 pb-12 pt-8 text-xl text-slate-100 lg:px-12 2xl:px-16"
+>
+  <div class="h-card mx-auto mt-4 max-w-screen-2xl lg:flex lg:gap-12">
+    <div class="items-center gap-6 sm:flex">
+      <div>
+        <img
+          class="flex-shrink-0 rounded-full bg-red-600 max-sm:mx-auto"
+          src="{{ site.imgDir }}logo-optimized.svg"
+          width="80"
+          height="80"
+          aria-hidden
+/>
+      </div>
+      <p class="p-org font-display text-4xl max-sm:mt-6 max-sm:text-center">
+        {{site.name}}
+      </p>
+    </div>
+    <div class="max-lg:mt-12 sm:flex sm:gap-16 lg:block xl:ml-auto xl:flex">
+      <div class="lg:ml-auto">
+        <p class="text-slate-400">Send written correspondence to</p>
+        <p class="p-org mt-2">{{site.name}}</p>
+        <p class="p-name">c/o {{ site.contact.name }}</p>
+        <div class="h-adr">
+          <p class="p-street-address">{{ site.contact.address }}</p>
+          <p>
+            <span class="p-locality">{{ site.contact.city }}</span>,
+            <span class="p-region">{{ site.contact.state }}</span>
+          </p>
+          <p class="p-postal-code">{{ site.contact.zip }}</p>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a
+          class="u-email hover:underline"
+          href="mailto:{{ site.contact.email }}"
+          >{{ site.contact.email }}</a
+        >
+        <p>
+          <a
+            href="tel:{{ site.contact.phone | replace(' ', '') }}"
+            class="p-tel hover:underline"
+          >
+            {{ site.contact.phone }}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
