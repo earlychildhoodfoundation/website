@@ -1,6 +1,56 @@
+{% css %}
+
+@media (prefers-reduced-motion: no-preference) {
+  #hero-image {
+    animation: hero-in linear;
+    animation-timeline: view();
+    animation-range-start: 115vh;
+    animation-range-end: 200vh;
+  }
+
+  #home h1 {
+    animation: hero-text-in linear;
+    animation-timeline: view();
+    animation-range-start: 85vh;
+    animation-range-end: 115vh;
+  }
+
+  @keyframes hero-in {
+    0% {
+      scale: 1;
+      transform: translateY(0%);
+      filter: blur(0);
+    }
+    100% {
+      scale: 1.2;
+      transform: translateY(10%);
+      filter: blur(5px);
+    }
+  }
+
+  @keyframes hero-text-in {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      scale: 0.8;
+    }
+  }
+}
+{% endcss %}
+
+{% js %}
+  function setScrollVar() {
+    const htmlElement = document.documentElement;
+    const percentageOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
+    htmlElement.style.setProperty('--scroll', percentageOfScreenHeightScrolled);
+  }
+{% endjs %}
 <header id="home">
-  <div class="grid place-items-center place-content-center bg-[--brand-hero-bg-color] [grid-template-areas:'hero-stack'] pt-[4vh] pb-[2vh] isolate">
+  <div class="grid place-items-center place-content-center bg-[--brand-hero-bg-color] [grid-template-areas:'hero-stack'] pt-[4vh] pb-[2vh] isolate overflow-clip">
     <img
+    id="hero-image"
     class="w-auto max-h-[87vh] [grid-area:hero-stack] z-0"
     src="{{ site.imgDir }}hero-image.jpg"
     alt="Photo from a Creative Playthings catalog showing two young children playing in front of a large plywood structure. Toys from the company are displayed inside the structure. Photograph taken in the mid 1940's."
