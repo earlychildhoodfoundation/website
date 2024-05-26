@@ -1,13 +1,13 @@
 {
   "name": "earlychildhoodfoundation.org",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "This repository contains the source code for the website of the Caplan Foundation for Early Childhood. The foundation is dedicated to improving the quality of early childhood education and development for children from birth through age seven.",
   "main": "index.js",
   "scripts": {
-    "prod:build": "npx @11ty/eleventy --quiet && npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --minify",
-    "www:serve": "npx @11ty/eleventy --serve --incremental --quiet",
-    "debug:serve": "node --inspect node_modules/.bin/eleventy --serve --incremental",
-    "css:dev": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --watch"
+    "build": "npx @11ty/eleventy --quiet && npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --minify",
+    "serve": "npx @11ty/eleventy --serve --incremental --quiet",
+    "debug": "node --inspect node_modules/.bin/eleventy --serve --incremental",
+    "css": "npx tailwindcss -i ./src/assets/styles/styles.css -o ./www/assets/styles/styles.css --watch"
   },
   "keywords": [],
   "author": "",
