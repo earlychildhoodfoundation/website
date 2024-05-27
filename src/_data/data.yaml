@@ -4,6 +4,8 @@ guidelines:
     image:
       file: 'parenting-education.jpg'
       alt: 'A close-up image of a child’s hands with spread fingers and five finger puppets made by Creative Playthings placed on them.'
+      width: 540
+      height: 553
       rotationClass: 'md:-rotate-[2deg]'
       borderColorClass: 'border-red-400 dark:border-red-400'
     translationClass: '2xl:translate-y-[5%]'
@@ -15,8 +17,10 @@ guidelines:
     image:
       file: 'child-welfare.jpg'
       alt: 'A young girl whispers something into the ear of a young boy. Both children are smiling. This image appeared in Creative Playthings catalog.'
+      width: 526
+      height: 539
       rotationClass: 'md:-rotate-[3deg]'
-      borderColorClass: 'border-blue-400 dark:border-blue-400 rounded-full'
+      borderColorClass: 'border-blue-400 dark:border-blue-400'
     titleClass: 'text-blue-900'
     cardClass: 'xl:bg-blue-50/90'
     paragraphs:
@@ -26,6 +30,8 @@ guidelines:
     image:
       file: 'education-and-play.jpg'
       alt: 'A young boy stacks squares with different arrangements of holes onto matching pegs. This image appeared in Creative Playthings catalog.'
+      width: 526
+      height: 539
       rotationClass: 'md:rotate-[3deg]'
       borderColorClass: 'border-yellow-400 dark:border-yellow-300'
     translationClass: '2xl:-translate-y-[5%]'
