@@ -1,16 +1,17 @@
 <section tabindex="-1" aria-labelledby="application-process">
   <div
-    class="diagonal-box before:bg-gradient-to-bl dark:before:bg-gradient-to-b text-blue-950 dark:text-slate-100 before:bg-slate-50 before:dark:from-slate-700 before:dark:via-slate-700  before:dark:to-slate-700 [--skew-amount:-2] dark:before:border-ydark:before:border-slate-500"
+    class="diagonal-box  text-blue-950 before:bg-slate-200/60 dark:text-slate-100 dark:before:bg-gradient-to-b dark:before:from-slate-700 before:dark:via-slate-700  before:dark:to-slate-700 [--skew-amount:-2] dark:before:border-y dark:before:border-slate-500"
   >
-    <div class="content">
-      <div class="mx-auto max-w-screen-2xl px-6 pt-16 text-2xl">
+    <div class="content leading-normal">
+      <div class="mx-auto max-w-screen-2xl pt-16 text-2xl lg:grid lg:grid-cols-8 lg:gap-4 py-10 px-4">
         <h2
           id="application-process"
-          class="font-display text-4xl text-red-600 dark:text-red-400"
+          class="font-display text-4xl text-red-600 dark:text-red-400 col-span-8"
         >
           Application Process
         </h2>
-        <p>
+        <div class="col-start-1 col-span-5">
+          <p>
           The Foundation employs a two-step grant application process that
           includes the submission of both a Letter of Inquiry (LOI) and a Full
           Proposal–the latter only by those applicants requested to do so. This
@@ -18,11 +19,11 @@
           applications that strictly comply with the Foundation’s programmatic
           guidelines.
         </p>
-        <p>
+          <p>
           The next deadline for submitting a LOI is
           <b>{{ site.nextDeadline }}</b>.
         </p>
-        <p>
+          <p>
           Applicants must submit Letters of Inquiry by clicking on the
           <i>Email your Letter of Inquiry</i> button below. Once a Letter of
           Inquiry is received by the Foundation, the Directors will determine if
@@ -30,11 +31,12 @@
           Successful applicants will be invited via email to submit Full
           Proposals.
         </p>
-        <p>
-          <strong>Each Letter of Inquiry should include:</strong>
-        </p>
+          <p>
+            <strong>Each Letter of Inquiry should include:</strong>
+          </p>
+        </div>
         <ol
-          class="list-count my-6 rounded-2xl bg-white/70 p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300 md:text-2xl  md:font-medium border border-slate-200 dark:border-slate-800"
+          class="col-start-1 col-span-8 list-count my-6 rounded-2xl bg-white/70 p-4 text-slate-900 lg:columns-2 dark:bg-slate-600 dark:text-slate-300 md:text-2xl  md:font-medium border border-slate-200 dark:border-slate-800"
         >
           {%- for inclusion in data.inclusions %}
             <li>
@@ -46,9 +48,9 @@
             </li>
           {%- endfor %}
         </ol>
-
-        <p>
-          <mark>
+        <div class="col-start-1 col-span-5">
+          <p>
+            <mark>
             Your Letter of Inquiry must follow the number format listed
             above.</mark
           >
@@ -56,7 +58,7 @@
           review by the Board of Directors. Please note LOI and the name of your
           organization in the subject line of your email.
         </p>
-        <p>
+          <p>
           There are many proposals that we do not consider because they do not
           meet the criteria stated in our website. We strive to fund ideas that
           are adventurous, thoughtful and challenge the status quo. They should
@@ -66,39 +68,37 @@
           cultural studies and practices.
         </p>
 
-        
-
-        <p>
+          <p>
           All written correspondence to the Caplan Foundation for Early
           Childhood should be directed to
           <strong>
-            {{ site.contact.name }}, {{ site.contact.address }}, {{
+              {{ site.contact.name }}, {{ site.contact.address }}, {{
             site.contact.city }}
-            {{ site.contact.state }}, {{ site.contact.zip
+              {{ site.contact.state }}, {{ site.contact.zip
             }}</strong
           >
-        </p>
-        <div class="mb-8 mt-24 flex justify-center">
-          <a
+          </p>
+          <div class="mb-8 mt-24 flex justify-center">
+            <a
             href="mailto:{{ site.contact.email }}?subject=Letter%20of%20Inquiry"
             class="flex items-center justify-center mb-2 me-2 rounded-full px-4 py-2 lg:px-8 lg:py-4 text-center text-2xl lg:text-3xl lg:font-semibold hover:text-blue-800 text-blue-700 focus:outline-none focus:ring-4 focus:ring-purple-400 dark:focus:ring-purple-800 border-8 
             hover:bg-yellow-300 bg-yellow-200 hover:border-yellow-500 border-yellow-400 transition duration-200"
             >
-            <svg fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-8 w-8 -rotate-12 mr-2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"></path>
-            </svg>
-            <span>Email your Letter of Inquiry</span>
-          </a
+              <svg fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-8 w-8 -rotate-12 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"></path>
+              </svg>
+              <span>Email your Letter of Inquiry</span>
+            </a
           >
-        </div>
-        <p class="text-sky-800 dark:text-slate-300 max-w-prose mx-auto text-xl pb-16 text-center">
+          </div>
+          <p class="text-sky-800 dark:text-slate-300 text-xl pb-16 text-center">
             This will open your default email client. If you are using a
             different client, please send the email to
             <a href="mailto:{{site.contact.email}}?subject=Letter%20of%20Inquiry" class="hover:underline"
               >{{site.contact.email}}</a
             >, and use "Letter of Inquiry" as your subject line.
           </p>
-
+        </div>
       </div>
     </div>
   </div>

@@ -196,7 +196,7 @@
   }
 
   .list-count > li {
-    align-items: center;
+    /* align-items: center; */
     break-inside: avoid-column; /* IE and Edge */
     -webkit-column-break-inside: avoid; /* Chrome, Safari */
     display: flex;
