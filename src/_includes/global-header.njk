@@ -1,5 +1,4 @@
 {% css %}
-
 @media (prefers-reduced-motion: no-preference) {
   #hero-image {
     animation: hero-in linear;
@@ -39,14 +38,6 @@
   }
 }
 {% endcss %}
-
-{% js %}
-  function setScrollVar() {
-    const htmlElement = document.documentElement;
-    const percentageOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
-    htmlElement.style.setProperty('--scroll', percentageOfScreenHeightScrolled);
-  }
-{% endjs %}
 <header id="home">
   <div class="grid place-items-center place-content-center bg-[--brand-hero-bg-color] [grid-template-areas:'hero-stack'] pt-[4vh] pb-[2vh] isolate overflow-clip">
     <img

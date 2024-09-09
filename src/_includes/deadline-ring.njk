@@ -1,3 +1,5 @@
+{# Inspired by https://dev.to/jh3y/circular-text-with-css-57jf #}
+
 {%- set options = {
   string: 'Upcoming LOI deadline • ',
   spacing: 1.2,
@@ -67,7 +69,7 @@
     <span class="sr-only">{{ options.string }}</span>
   </div>
   <div class="rotate-6">
-    <span id="ring-date" class="text-highlight px-4 font-semibold">{{ options.date }}</span>
+    <span id="ring-date" class="text-highlight px-4 font-semibold font-sans">{{ options.date }}</span>
   </div>
 
 </div>

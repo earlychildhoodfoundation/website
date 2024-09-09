@@ -1,6 +1,7 @@
 ---
 permalink: /index.html
 title: Home
+bodyClasses: bg-white/30 dark:bg-slate-900
 ---
 
 {% extends './_layouts/default.njk' %}
@@ -16,12 +17,15 @@ title: Home
 {%-block scripts %}{% endblock %}
 
 {% js %}
+{# An intersection observer adds an 'is-intersecting' class to the section that is currently in view, and updates the active state of the global nav links accordingly. #}
+
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('#globalNav a');
 
 const observer = new IntersectionObserver((entries) => {
   sections.forEach((section) => section.classList.remove('is-intersecting'));
   entries.forEach((entry) => {
+
     if (entry.isIntersecting) {
       entry.target.classList.add('is-intersecting');
 
@@ -29,6 +33,7 @@ const observer = new IntersectionObserver((entries) => {
 
       const id = entry.target.getAttribute('aria-labelledby');
       const navLink = document.querySelector(`#globalNav a[href="#${id}"]`);
+
       if (navLink) {
         console.log(navLink);
         navLink.classList.add('global-nav-active');
@@ -44,7 +49,47 @@ sections.forEach(section => observer.observe(section));
 {% endjs %}
 
 {% css %}
-.is-intersecting {
+body::before {
+  position: absolute;
+  inset: 0;
+  background-image: url(/assets/images/blurry-bg-2.jpg);
+  position: fixed;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  z-index: -1;
+}
+
+@keyframes move-up {
+  0% {
+    transform:translateY(10%);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {opacity:0.5}
+  to {opacity:1}
+}
+
+@keyframes scale-up {
+  from {scale: 0.8}
+  to {scale: 1}
+}
+
+@keyframes in-left {
+  from {transform:translateX(-30%)}
+  to {transform:translateX(0)};
+}
+
+@keyframes in-right {
+  from {transform:translateX(30%)}
+  to {transform:translateX(0)};
 }
 {% endcss %}
 

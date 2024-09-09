@@ -12,7 +12,7 @@ module.exports = {
     city: 'Lock Haven',
     state: 'PA',
     zip: '17745',
-    email: 'earlychildhoodfoundation@gmail.com',
+    email: 'info@earlychildhoodfoundation.org',
     phone: '+1 570 484 5155',
   },
   tagline:
