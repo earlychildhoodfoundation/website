@@ -52,7 +52,7 @@ pageNavigation:
       {# {%- endif %} #}
       <h2 id="grants-{{ item.year }}" class="{{ borderTop }} pt-2 font-display text-red-600 dark:text-red-400 text-3xl">{{ item.year }}</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {% for grant in item.grants %}
+        {% for grant in item.grants | sortAlphaByKey('project') %}
           {%- if loop.index != 1 and loop.index != 2  %}
             {%- set borderClass = 'border-t' %}
           {%- endif %}

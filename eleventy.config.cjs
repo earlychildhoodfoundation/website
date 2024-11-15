@@ -132,6 +132,18 @@ module.exports = function (eleventyConfig) {
     return result;
   });
 
+  eleventyConfig.addFilter('sortAlphaByKey', function (arr, key) {
+    return arr.sort((a, b) => {
+      if (a[key] < b[key]) {
+        return -1;
+      }
+      if (a[key] > b[key]) {
+        return 1;
+      }
+      return 0;
+    });
+  });
+
   eleventyConfig.addFilter('sortObjectByKeysDesc', function (obj) {
     return Object.keys(obj)
       .sort()
