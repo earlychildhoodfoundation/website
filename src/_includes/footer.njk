@@ -20,17 +20,17 @@
           src="{{ site.imgDir }}logo-optimized.svg"
           width="80"
           height="80"
-          aria-hidden
+          alt="Logo for {{ site.name }}"
 />
       </div>
       <p class="p-org font-display text-4xl max-sm:mt-6 max-sm:text-center">
-        {{site.name}}
+        {{ site.name }}
       </p>
     </div>
     <div class="max-lg:mt-12 sm:flex sm:gap-16 lg:block xl:ml-auto xl:flex">
       <div class="lg:ml-auto">
         <p class="text-slate-400">Send written correspondence to</p>
-        <p class="p-org mt-2">{{site.name}}</p>
+        <p class="p-org mt-2">{{ site.name }}</p>
         <p class="p-name">c/o {{ site.contact.name }}</p>
         <div class="h-adr">
           <p class="p-street-address">{{ site.contact.address }}</p>
