@@ -2,6 +2,7 @@
 
 {%- set options = {
   string: 'Upcoming LOI deadline • ',
+  speed: '30s',
   spacing: 1.2,
   size: 1.15,
   date: site.nextAbbreviatedDeadline
@@ -48,7 +49,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   #ring {
-  	animation: spin 60s infinite linear;
+  	animation: spin {{ options.speed }} infinite linear;
   }
 
   @keyframes spin {
