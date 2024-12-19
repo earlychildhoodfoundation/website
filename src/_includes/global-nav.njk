@@ -2,13 +2,15 @@
   <ul class="list-none flex max-md:hidden justify-between  px-[2vw] max-w-screen-3xl mx-auto">
     <li class="py-1">
       <a href="#intro">
+        <span class="sr-only">Home (top of page)</span>
         <img
           class="flex-shrink-0 rounded-full bg-red-600 border border-slate-200"
           src="{{ site.imgDir }}logo-optimized.svg"
           width="50"
           height="50"
+          alt=""
           aria-hidden
-/>
+        />
       </a>
     </li>
     {%- for navItem in site.navigation %}
