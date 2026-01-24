@@ -5,7 +5,7 @@
   year: 2018
 - organization: Purdue University
   amount: 56240
-  project: "Examining ABI approach's influence on academic outcomes"
+  project: Examining ABI approach's influence on academic outcomes
   year: 2018
 - organization: Vanderbilt University
   amount: 46900
@@ -13,7 +13,8 @@
   year: 2018
 - organization: Nemours Hospital for Children
   amount: 50003
-  project: Identification of psychosocial stressors, support for families with autistic children
+  project: Identification of psychosocial stressors, support for families with
+    autistic children
   year: 2018
 - organization: University of Illinois at Chicago
   amount: 50000
@@ -33,7 +34,8 @@
   year: 2019
 - organization: Vanderbilt University
   amount: 40093
-  project: Teaching caregiving sensitivity through video coding of parent-child interactions
+  project: Teaching caregiving sensitivity through video coding of parent-child
+    interactions
   year: 2019
 - organization: Boston Medical Center
   amount: 40000
@@ -111,7 +113,7 @@
   amount: 50000
   project: To develop first Fab Lab for young children
   year: 2015
-- organization: 'The Children’s Healthcare of Atlanta Marcus Autism Center'
+- organization: The Children's Healthcare of Atlanta Marcus Autism Center
   amount: 25000
   project: Developing an application - iEAT - for parents
   year: 2015
@@ -135,24 +137,25 @@
   amount: 34200
   project: Ameliorating Developmental Signs in Infants
   year: 2015
-- organization: Minnesota Children’s Museum
+- organization: Minnesota Children's Museum
   amount: 25000
   project: Power of Play Initiative
   year: 2016
 - organization: Peabody Research Institute
   amount: 22848
-  project: Promoting young children’s prosocial behaviors in early education
+  project: Promoting young children's prosocial behaviors in early education
   year: 2015
 - organization: Oklahoma State University Foundation
   project: Preventing suspension and expulsion through professional development
   amount: 100000
   year: 2016
 - organization: University of Florida
-  project: "Dialogic reading intervention on low-income preschool children's emotion vocabulary"
+  project: Dialogic reading intervention on low-income preschool children's
+    emotion vocabulary
   amount: 37552
   year: 2019
 - organization: University of Missouri
-  project: Investigating play’s role in preschool cognitive development
+  project: Investigating play's role in preschool cognitive development
   amount: 64824
   year: 2019
 - organization: University of Kansas Center for Research
@@ -160,11 +163,13 @@
   amount: 36120
   year: 2019
 - organization: University of Minnesota
-  project: Identifying clinical factors predicting later metabolic and neurodevelopmental outcomes in premature infants
+  project: Identifying clinical factors predicting later metabolic and
+    neurodevelopmental outcomes in premature infants
   amount: 46100
   year: 2019
 - organization: University of Alabama
-  project: Improving Preschoolers’ Executive Functioning and Behavior through Music Therapy Programming
+  project: Improving Preschoolers' Executive Functioning and Behavior through
+    Music Therapy Programming
   amount: 46517
   year: 2020
 - organization: University of North Texas
@@ -188,7 +193,7 @@
   amount: 44326
   year: 2020
 - organization: Portland State University
-  project: 'Playing in Digital Spaces: online early education environments'
+  project: "Playing in Digital Spaces: online early education environments"
   amount: 39675
   year: 2020
 - organization: University of Wisconsin-Madison
@@ -200,14 +205,14 @@
   amount: 50000
   year: 2021
 - organization: Harvard University
-  project: 'The Mind Lab: Thought Experiments to Teach Science'
+  project: "The Mind Lab: Thought Experiments to Teach Science"
   amount: 61666
   year: 2021
 - organization: Utah State University
   project: Storytelling to Culturally Innovate Indigenous Preschool Education
   amount: 52333
   year: 2021
-- organization: UPMC Children’s Hospital of Pittsburgh
+- organization: UPMC Children's Hospital of Pittsburgh
   project: Identifying and Preventing Heavy Metal Exposure in Newborns
   amount: 50000
   year: 2021
@@ -236,7 +241,7 @@
   amount: 49896
   year: 2022
 - organization: Augusta University
-  project: 'CLIMBE: Collaborative Learning In Multisensory Based Environments'
+  project: "CLIMBE: Collaborative Learning In Multisensory Based Environments"
   amount: 49537
   year: 2022
 - organization: Thomas Jefferson University and Jefferson Health
@@ -244,7 +249,7 @@
   amount: 45000
   year: 2022
 - organization: Mass General
-  project: 'Pediatric Healthy Heart Connect – Using AI to improve the lives of children'
+  project: Pediatric Healthy Heart Connect – Using AI to improve the lives of children
   amount: 120000
   year: 2022
 - organization: University of Washington
@@ -252,7 +257,7 @@
   amount: 86250
   year: 2022
 - organization: University of Massachusetts Amherst
-  project: 'Family Influence on Young Children’s Conceptualization of Disability'
+  project: Family Influence on Young Children's Conceptualization of Disability
   amount: 51285
   year: 2022
 - organization: Wayne State University
@@ -264,7 +269,7 @@
   amount: 75000
   year: 2022
 - organization: NYU Steinhardt
-  project: 'Wordless Picture Books at home for Preschool Readiness'
+  project: Wordless Picture Books at home for Preschool Readiness
   amount: 51060
   year: 2022
 - organization: University of Southern California
@@ -272,11 +277,12 @@
   amount: 47150
   year: 2023
 - organization: Drexel University
-  project: 'The Qualitative Characteristics of a Children’s Play (QCCP) Assessment System'
+  project: The Qualitative Characteristics of a Children's Play (QCCP) Assessment System
   amount: 79353
   year: 2023
 - organization: Carnegie Mellon University
-  project: 'Using picture books in preschool classrooms to promote positive racial attitudes'
+  project: Using picture books in preschool classrooms to promote positive racial
+    attitudes
   amount: 82091
   year: 2023
 - organization: University of Connecticut Health Center
@@ -284,7 +290,7 @@
   amount: 57500
   year: 2024
 - organization: University of South Florida
-  project: "Supporting Children's Dramatic Play"
+  project: Supporting Children's Dramatic Play
   amount: 50000
   year: 2024
 - organization: University of Texas Foundation
@@ -292,30 +298,71 @@
   amount: 50000
   year: 2024
 - organization: Boston University
-  project: 'Analyzing Child-AI Conversations: Implications on STEM Participation'
+  project: "Analyzing Child-AI Conversations: Implications on STEM Participation"
   amount: 49998
   year: 2024
 - organization: Connecticut College
-  project: 'Links between playful learning and self-regulated learning'
+  project: Links between playful learning and self-regulated learning
   amount: 44287
   year: 2024
 - organization: Boston College
-  project: 'Facilitating Parents Math Talk Through Games'
+  project: Facilitating Parents Math Talk Through Games
   amount: 58924
   year: 2024
 - organization: University of Wisconsin-Madison
-  project: 'Role of Play Quality in Cognitive Outcomes for CP-PBI'
+  project: Role of Play Quality in Cognitive Outcomes for CP-PBI
   amount: 75000
   year: 2024
 - organization: SUNY RF / University at Albany
-  project: Acceptability and Feasibility of a Single-Session Online Parent-Focused Intervention Targeting Predictors of Body Image Disturbance
+  project: Acceptability and Feasibility of a Single-Session Online Parent-Focused
+    Intervention Targeting Predictors of Body Image Disturbance
   amount: 45302
   year: 2024
 - organization: Virginia Polytechnic Institute and State University
-  project: Supporting playful parent-child joint reading experiences through AI digital technology
+  project: Supporting playful parent-child joint reading experiences through AI
+    digital technology
   amount: 58320
   year: 2024
 - organization: Harvard University
   project: Detecting and Learning From Automatic Teaching in Early Childhood
   amount: 63000
   year: 2024
+- organization: Merrimack College
+  project: Examining Differences in Sleep and Cognition During Early Childhood
+  amount: 41805
+  year: 2025
+- organization: University of New Hampshire
+  project: Creating a Parenting Education Website and Resource Packs for Managing
+    Children's Sibling Conflict
+  amount: 80266
+  year: 2025
+- organization: University of North Carolina at Chapel Hill
+  project: "Preventing Exclusionary Practices in ECE: Promoting Social and
+    Emotional Development"
+  amount: 77000
+  year: 2025
+- organization: National Wildlife Federation
+  project: Tools for Supporting Social-Emotional Development in Outdoor Learning
+    Environments
+  amount: 75000
+  year: 2025
+- organization: New York University
+  project: The Small Moments Study
+  amount: 54292
+  year: 2025
+- organization: Florida State University Research Foundation
+  project: Development of a Tiered Professional Development Model to Support
+    Caregiver Implementation of Dialogic Reading with a Focus on Emotional
+    Regulation
+  amount: 74575
+  year: 2025
+- organization: University of California, Berkeley
+  project: Examining the role of external aids in supporting children's working
+    memory when learning addition and subtraction
+  amount: 50000
+  year: 2025
+- organization: Cincinnati Children's Hospital Medical Center
+  project: "LightStart: Broad-Spectrum Circadian Lighting to Support Early
+    Childhood Development"
+  amount: 75000
+  year: 2025

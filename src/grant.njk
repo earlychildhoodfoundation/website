@@ -35,8 +35,8 @@ pageNavigation:
 
 {%- block main %}
   {# Slicing from {{ start }} to {{ end }} out of a total of {{ grants.length }} grants. #}
-  <section class="mx-auto max-w-screen-2xl px-6 pt-12 pb-24 text-2xl" tabindex="-1">
-    <div class="flex mb-36">
+  <div class="mx-auto max-w-screen-2xl px-6 pt-12 pb-24 text-2xl" tabindex="-1">
+    <header class="flex mb-36">
       <a
     href="/#grant-recipients"
     class="mb-2 me-2 rounded-full border-4 border-blue-400 bg-blue-700 px-4 py-2 text-center text-xl text-white transition duration-200 hover:border-blue-500 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-purple-400 lg:text-2xl lg:font-medium dark:focus:ring-purple-800"
@@ -44,24 +44,26 @@ pageNavigation:
         <span aria-hidden>← </span>Home</a
   >
       <h1 class="text-5xl font-display my-0 ml-12">{{ heading }}</h1>
-    </div>
+    </header>
 
     {% for item in grantsByYear %}
       {# {%- if loop.index != 1 %} #}
       {%- set borderTop = 'border-t-8 border-slate-900 dark:border-slate-700' %}
       {# {%- endif %} #}
-      <h2 id="grants-{{ item.year }}" class="{{ borderTop }} pt-2 font-display text-red-600 dark:text-red-400 text-3xl">{{ item.year }}</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {% for grant in item.grants | sortAlphaByKey('project') %}
-          {%- if loop.index != 1 and loop.index != 2  %}
-            {%- set borderClass = 'border-t' %}
-          {%- endif %}
-          <div class="{{ borderClass }} border-slate-400 dark:border-slate-700 xl:pr-16">
-            <div class="text-3xl pt-4 font-semibold text-slate-800 dark:text-slate-100 text-balance">{{ grant.project| formatTitle }}</div>
-            <div class="text-2xl pb-8 text-slate-600 dark:text-slate-300">{{ grant.organization }} — {{ grant.year }} · ${{ grant.amount | commaNumber }}</div>
-          </div>
-        {% endfor %}
-      </div>
+      <section aria-labelledby="grants-{{ item.year }}">
+        <h2 id="grants-{{ item.year }}" class="{{ borderTop }} pt-2 font-display text-red-600 dark:text-red-400 text-3xl">{{ item.year }}</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {% for grant in item.grants | sortAlphaByKey('project') %}
+            {%- if loop.index != 1 and loop.index != 2  %}
+              {%- set borderClass = 'border-t' %}
+            {%- endif %}
+            <article class="{{ borderClass }} border-slate-400 dark:border-slate-700 xl:pr-16">
+              <div class="text-3xl pt-4 font-semibold text-slate-800 dark:text-slate-100 text-balance">{{ grant.project| formatTitle }}</div>
+              <div class="text-2xl pb-8 text-slate-600 dark:text-slate-300">{{ grant.organization }} — {{ grant.year }} · ${{ grant.amount | commaNumber }}</div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
     {% endfor %}
-  </section>
+  </div>
 {%- endblock %}
