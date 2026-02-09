@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: '0 5 1 2,10 *' # Midnight ET on Feb 1 and Oct 1
     - cron: '0 4 1 6 *' # Midnight ET on Jun 1 during DST
+  workflow_dispatch:
 jobs:
   deploy:
     name: 'Auto Deploy'
