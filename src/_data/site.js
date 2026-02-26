@@ -13,7 +13,7 @@ module.exports = {
     state: 'PA',
     zip: '17745',
     email: 'info@earlychildhoodfoundation.org',
-    phone: '+1 570 484 5155',
+    phone: '+1 570 660 7876',
   },
   tagline:
     'The Caplan Foundation for Early Childhood provides grants for innovative, creative projects and programs that will significantly enhance the development, health, safety, education or quality of life of children from infancy through seven years of age.',
